@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ByteArray")]
-[assembly: AssemblyDescription("Wrapper for byte arrays to ease data type conversions to and from byte arrays.")]
+[assembly: AssemblyDescription("Wrapper to ease data type conversions to and from byte arrays")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ByteArray")]

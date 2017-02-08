@@ -3,7 +3,7 @@
 namespace Libraries
 {
     /// <summary>
-    /// Wrapper for a byte[] buffer to perform different data type conversions on it's data
+    /// Wrapper to ease data type conversions to and from <see cref="byte"/> arrays
     /// </summary>
     public partial class ByteArray
     {
