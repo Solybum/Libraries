@@ -689,7 +689,7 @@ namespace Libraries
                 {
                     break;
                 }
-                result += ReadCharW();
+                result += ReadCharW(position);
                 position += 2;
             }
             return result;
