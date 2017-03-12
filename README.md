@@ -16,3 +16,6 @@ More information on this [issue](https://github.com/JamesNK/Newtonsoft.Json/issu
   
 [Ookii.Dialogs](http://www.ookii.org/software/dialogs/)  
 A class library for .Net applications providing several common dialogs. Included are classes for task dialogs, credential dialogs, progress dialogs, input dialogs, and common file dialogs.  
+  
+[SQLite](https://www.sqlite.org/)  
+A self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine.  
