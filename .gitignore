@@ -275,5 +275,8 @@ __pycache__/
 !Newtonsoft.Json/bin/Release/
 !Newtonsoft.Json/bin/Release/*
 
-# MySQL Connector Net
+# SQLite
 !SQLite/bin/
+
+# Avalon Edit
+!SpreadsheetLight/bin/
