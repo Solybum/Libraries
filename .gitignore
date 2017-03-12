@@ -281,5 +281,8 @@ __pycache__/
 # SQLite
 !SQLite/bin/
 
+# WPF Animated GIF
+!WPF Animated GIF/bin
+
 # WPF.Toolkit
 !WPF.Toolkit/bin

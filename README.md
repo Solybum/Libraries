@@ -21,6 +21,9 @@ A class library for .Net applications providing several common dialogs. Included
 [SQLite](https://www.sqlite.org/)  
 A self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine.  
   
+[WPF Animated GIF](https://github.com/XamlAnimatedGif/WpfAnimatedGif)  
+A simple library to display animated GIF images in WPF, usable in XAML or in code.  
+  
 [WPF.Toolkit](http://wpftoolkit.codeplex.com/)  
 The number one collection of WPF controls, components and utilities for creating next generation Windows applications.  
 Does not include localized resources nor themes for AvalonDock  
