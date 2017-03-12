@@ -259,3 +259,8 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# Newtonsoft.Json compiled binaries
+!Newtonsoft.Json/bin/
+!Newtonsoft.Json/bin/*/
+!Newtonsoft.Json/bin/*/*.*
