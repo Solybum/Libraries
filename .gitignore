@@ -260,6 +260,11 @@ paket-files/
 __pycache__/
 *.pyc
 
+# Library binaries
+
+# Avalon Edit
+!AvalonEdit/bin/
+
 # MySQL Connector Net
 !MySQL Connector/bin/
 

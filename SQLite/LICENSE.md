@@ -1,0 +1,1 @@
+[Public Domain](https://sqlite.org/copyright.html)

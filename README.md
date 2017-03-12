@@ -1,5 +1,6 @@
 # Libraries
 A collection of libraries I use in my projects.
+The license in the root of this repository applies to all works made by me, other works include their respective licenses in their directory.
 
 ### Contents
 [ByteArray](https://github.com/Solybum/Libraries/tree/master/ByteArray)  
