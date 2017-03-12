@@ -265,5 +265,7 @@ __pycache__/
 
 # Newtonsoft.Json compiled binaries
 !Newtonsoft.Json/bin/
-!Newtonsoft.Json/bin/*/
-!Newtonsoft.Json/bin/*/*.*
+!Newtonsoft.Json/bin/Debug/
+!Newtonsoft.Json/bin/Debug/*
+!Newtonsoft.Json/bin/Release/
+!Newtonsoft.Json/bin/Release/*
