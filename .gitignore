@@ -260,6 +260,9 @@ paket-files/
 __pycache__/
 *.pyc
 
+# MySQL Connector Net
+!MySQL Connector/bin/
+
 # Newtonsoft.Json compiled binaries
 !Newtonsoft.Json/bin/
 !Newtonsoft.Json/bin/*/

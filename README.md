@@ -5,6 +5,10 @@ A collection of libraries I use in my projects.
 [ByteArray](https://github.com/Solybum/Libraries/tree/master/ByteArray)  
 A wrapper to ease data type conversions to and from byte arrays.  
 
+[MySQL Connector/Net](https://dev.mysql.com/downloads/connector/net/)  
+Connector/Net is a fully-managed ADO.NET driver for MySQL.  
+Includes library for Net v4.5 only  
+
 [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)  
 Popular high-performance JSON framework for .NET  
 Note: This compiled library has been modified to allow Hex Numbers as binary keys.  
