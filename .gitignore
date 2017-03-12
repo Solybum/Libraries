@@ -275,8 +275,11 @@ __pycache__/
 !Newtonsoft.Json/bin/Release/
 !Newtonsoft.Json/bin/Release/*
 
+# SpreadsheetLight
+!SpreadsheetLight/bin/
+
 # SQLite
 !SQLite/bin/
 
-# Avalon Edit
-!SpreadsheetLight/bin/
+# WPF.Toolkit
+!WPF.Toolkit/bin
