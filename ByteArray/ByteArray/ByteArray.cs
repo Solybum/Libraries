@@ -125,5 +125,17 @@ namespace Libraries
             get { return _buffer[offset]; }
             set { _buffer[offset] = value; }
         }
+
+        /// <summary>
+        /// Advances the internal position until the pad boundary is met, zeroing the clearing the array bytes in the process
+        /// </summary>
+        /// <param name="padding">Number of bytes to pad</param>
+        public void Pad(int padding)
+        {
+            while ((_position % padding) != 0 && _position < _buffer.Length)
+            {
+                _buffer[_position++] = 0;
+            }
+        }
     }
 }
