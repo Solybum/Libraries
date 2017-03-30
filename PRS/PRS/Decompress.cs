@@ -17,7 +17,7 @@
             // Get decompressed size, no more no less
             int decompressed_size = Decompress(ctx, true);
             // Set the destination buffer
-            ctx.SetDst(decompressed_size);
+            ctx.ResizeDst(decompressed_size);
             // Reset the flags and positions
             ctx.Reset();
             // Now do the thing

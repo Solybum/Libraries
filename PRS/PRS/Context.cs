@@ -20,7 +20,7 @@ namespace Libraries.PRS
         internal Context(byte[] data)
         {
             src = data;
-            dst = null;
+            dst = new byte[data.Length];
             src_pos = 0;
             dst_pos = 0;
 
@@ -36,17 +36,17 @@ namespace Libraries.PRS
             bit_pos = 0;
         }
 
-        internal void SetDst(int length)
+        internal void ResizeDst(int size)
         {
-            dst = new byte[length];
-        }
-        internal byte[] GetDst()
-        {
-            return dst;
+            Array.Resize(ref dst, size);
         }
         internal int GetDstPostion()
         {
             return dst_pos;
+        }
+        internal byte[] GetDst()
+        {
+            return dst;
         }
     }
 }
