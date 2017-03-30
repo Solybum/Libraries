@@ -15,18 +15,18 @@
             Context ctx = new Context(data);
 
             // Get decompressed size, no more no less
-            int decompressed_size = Process(ctx, true);
+            int decompressed_size = Decompress(ctx, true);
             // Set the destination buffer
             ctx.SetDst(decompressed_size);
             // Reset the flags and positions
             ctx.Reset();
             // Now do the thing
-            Process(ctx, false);
+            Decompress(ctx, false);
             // Return the decompressed data
             return ctx.GetDst();
         }
 
-        private static int Process(Context ctx, bool size_only)
+        internal static int Decompress(Context ctx, bool size_only)
         {
             int flag = 0;
             int size = 0;
