@@ -14,16 +14,16 @@ Includes library for Net v4.5 only
 Popular high-performance JSON framework for .NET  
 This compiled library has been modified to allow Hex Numbers as binary keys.  
 More information on this [issue](https://github.com/JamesNK/Newtonsoft.Json/issues/1239)  
-  
+
 [Ookii.Dialogs](http://www.ookii.org/software/dialogs/)  
 A class library for .Net applications providing several common dialogs. Included are classes for task dialogs, credential dialogs, progress dialogs, input dialogs, and common file dialogs.  
-  
+
 [SQLite](https://www.sqlite.org/)  
 A self-contained, high-reliability, embedded, full-featured, public-domain, SQL database engine.  
-  
+
 [WPF Animated GIF](https://github.com/XamlAnimatedGif/WpfAnimatedGif)  
 A simple library to display animated GIF images in WPF, usable in XAML or in code.  
-  
+
 [WPF.Toolkit](http://wpftoolkit.codeplex.com/)  
 The number one collection of WPF controls, components and utilities for creating next generation Windows applications.  
 Does not include localized resources nor themes for AvalonDock  
