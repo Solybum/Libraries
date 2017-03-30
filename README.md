@@ -6,9 +6,9 @@ The license in the root of this repository applies to all works made by me, othe
 [ByteArray](https://github.com/Solybum/Libraries/tree/master/ByteArray)  
 A wrapper to ease data type conversions to and from byte arrays.  
 
-[PRS](https://github.com/FraGag/prs.net)  
+Temp [PRS](https://github.com/FraGag/prs.net)  
 PRS compression library by Francis Gagné.  
-I will be using this library while I port [this one](https://github.com/DaanVandenBosch/phantasmal-quest/tree/master/src/data/compression/prs)  
+I will be using this library while I port Lawrence Sebald [C library](https://sourceforge.net/p/sylverant/libpsoarchive/ci/master/tree/src/)  
 
 [MySQL Connector/Net](https://dev.mysql.com/downloads/connector/net/)  
 Connector/Net is a fully-managed ADO.NET driver for MySQL.  

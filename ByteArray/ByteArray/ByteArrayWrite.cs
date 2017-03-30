@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Libraries
+namespace Libraries.ByteArray
 {
     public partial class ByteArray
     {

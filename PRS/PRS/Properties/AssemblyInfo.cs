@@ -1,15 +1,16 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PRS")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("PRS compression library")]
+[assembly: AssemblyDescription("PRS compression library used by games like Phantasy Star Online Blue Burst\nPort of Lawrence Sebald's C library")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("PRS")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright("Copyright © Soleil Rojas 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a1f7f0c2-27b3-46d3-ab74-dc5d80e8c2fc")]
+[assembly: Guid("f5cdfc67-ad4b-4825-bd1c-aa54cf481058")]
 
 // Version information for an assembly consists of the following four values:
 //

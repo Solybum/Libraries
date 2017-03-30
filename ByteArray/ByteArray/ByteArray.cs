@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Libraries
+namespace Libraries.ByteArray
 {
     /// <summary>
     /// Wrapper to ease data type conversions to and from <see cref="byte"/> arrays
