@@ -1,31 +1,7 @@
 ﻿namespace Libraries.PRS
 {
-    /// <summary>
-    /// PRS Compression
-    /// </summary>
-    public partial class PRS
+    class PRSDecompression
     {
-        /// <summary>
-        /// Decompresses a byte array, returning the decompressed data in a new byte array
-        /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
-        public static byte[] Decompress(byte[] data)
-        {
-            Context ctx = new Context(data);
-
-            // Get decompressed size, no more no less
-            int decompressed_size = Decompress(ctx, true);
-            // Set the destination buffer
-            ctx.ResizeDst(decompressed_size);
-            // Reset the flags and positions
-            ctx.Reset();
-            // Now do the thing
-            Decompress(ctx, false);
-            // Return the decompressed data
-            return ctx.GetDst();
-        }
-
         internal static int Decompress(Context ctx, bool size_only)
         {
             int flag = 0;
