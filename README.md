@@ -2,12 +2,15 @@
 A collection of libraries I use in my projects.
 The license in the root of this repository applies to all works made by me, other works include their respective licenses in their directory.
 
-### Contents
+
+---
 [ByteArray](https://github.com/Solybum/Libraries/tree/master/ByteArray)  
 A wrapper to ease data type conversions to and from byte arrays.  
 
-[ByteArray](https://github.com/Solybum/Libraries/tree/master/PRS)  
+[PRS](https://github.com/Solybum/Libraries/tree/master/PRS)  
 PRS compression library used in Sega games.  
+
+---
 
 [MySQL Connector/Net](https://dev.mysql.com/downloads/connector/net/)  
 Connector/Net is a fully-managed ADO.NET driver for MySQL.  
