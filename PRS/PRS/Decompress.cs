@@ -20,57 +20,61 @@
                 {
                     // Flag bit = 1 -> Simple byte copy from src to dst.
                     CopyByte(ctx, size_only);
-                    continue;
-                }
-
-                // The flag starts with a zero, so it isn't just a simple byte copy.
-                // Read the next bit to see what we have left to do.
-                flag = ReadBit(ctx);
-
-                if (flag == 0)
-                {
-                    // Flag bit = 0 -> short copy.
-
-                    // Fetch the two bits needed to determine the size.
-                    flag = ReadBit(ctx);
-                    size = ReadBit(ctx);
-                    size = (size | (flag << 1)) + 2;
-
-                    // Fetch the offset byte.
-                    offset = ReadByte(ctx);
-                    offset = (int)(offset | 0xFFFFFF00);
                 }
                 else
                 {
-                    // Flag bit = 1->Either long copy or end of file.
-
-                    offset = ReadShort(ctx);
-                    if (offset == 0)
+                    // The flag starts with a zero, so it isn't just a simple byte copy.
+                    // Read the next bit to see what we have left to do.
+                    flag = ReadBit(ctx);
+                    
+                    if (flag == 0)
                     {
-                        break;
-                    }
+                        // Flag bit = 0 -> short copy.
 
-                    // Do we need to read a size byte, or is it encoded in what we already got?
-                    size = offset & 7;
-                    offset >>= 3;
+                        // Fetch the two bits needed to determine the size.
+                        flag = ReadBit(ctx);
+                        size = ReadBit(ctx);
+                        size = (size | (flag << 1)) + 2;
 
-                    if (size == 0)
-                    {
-                        size = ReadByte(ctx);
-                        size += 1;
+                        // Fetch the offset byte.
+                        offset = ReadByte(ctx);
+                        offset = (int)(offset | 0xFFFFFF00);
                     }
                     else
                     {
-                        size += 2;
+                        // Flag bit = 1->Either long copy or end of file.
+
+                        offset = ReadShort(ctx);
+
+                        // Two zero bytes implies that this is the end of the file.
+                        if (offset == 0)
+                        {
+                            break;
+                        }
+
+                        // Do we need to read a size byte, or is it encoded in what we already got?
+                        size = offset & 7;
+                        offset >>= 3;
+
+                        if (size == 0)
+                        {
+                            size = ReadByte(ctx);
+                            size += 1;
+                        }
+                        else
+                        {
+                            size += 2;
+                        }
+
+                        offset = (int)(offset | 0xFFFFE000);
                     }
 
-                    offset = (int)(offset | 0xFFFFE000);
-                }
-
-                while (size > 0)
-                {
-                    CopyByteAt(ctx, size_only, offset);
-                    size -= 1;
+                    // Copy the data.
+                    while (size > 0)
+                    {
+                        CopyByteAt(ctx, size_only, offset);
+                        size -= 1;
+                    }
                 }
             }
             return ctx.GetDstPostion();
