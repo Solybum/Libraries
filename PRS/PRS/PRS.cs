@@ -1,12 +1,11 @@
-﻿namespace Libraries.PRS
+﻿using System;
+using System.IO;
+
+namespace Libraries.PRS
 {
     /// <summary>
     /// PRS library
     /// </summary>
-    /// <remarks>
-    /// Compression and decompression are based on <see href="https://sourceforge.net/p/sylverant/libsylverant/ci/master/tree/src/utils/">Lawrence Sebald</see> original implementation.
-    /// Compression is also based on <see href="https://github.com/DaanVandenBosch/phantasmal-quest/blob/master/src/data/compression/prs/compress.js">DaanVandenBosch</see> implementation.
-    /// </remarks>
     public class PRS
     {
         /// <summary>
@@ -16,16 +15,18 @@
         /// <returns></returns>
         public static byte[] Compress(byte[] data)
         {
-            Context ctx = new Context(data);
-            HashTable hash = new HashTable();
+            using (MemoryStream src = new MemoryStream(data))
+            {
+                using (MemoryStream dst = new MemoryStream())
+                {
+                    long size = src.Length - src.Position;
+                    byte[] inputBytes = new byte[size];
+                    src.Read(inputBytes, 0, checked((int)size));
 
-            int compressed_size = PRSCompression.GetMaxCompressedSize(data.Length);
-            ctx.ResizeDst(compressed_size);
-
-            PRSCompression.Compress(ctx, hash);
-
-            ctx.ResizeDst(ctx.dst_pos);
-            return ctx.GetDst();
+                    PRSCompression.Encode(inputBytes, dst);
+                    return dst.ToArray();
+                }
+            }
         }
 
         /// <summary>
@@ -38,12 +39,12 @@
             Context ctx = new Context(data);
 
             int decompressed_size = PRSDecompression.Decompress(ctx, true);
-            ctx.ResizeDst(decompressed_size);
+            Array.Resize(ref ctx.dst, ctx.dst_pos);
             ctx.Reset();
 
             PRSDecompression.Decompress(ctx, false);
 
-            return ctx.GetDst();
+            return ctx.dst;
         }
     }
 }

@@ -1,12 +1,11 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("PRS compression library")]
-[assembly: AssemblyDescription("PRS compression library used by games like Phantasy Star Online Blue Burst\nPort of Lawrence Sebald's C library")]
+[assembly: AssemblyDescription("PRS compression library used by games like Phantasy Star Online Blue Burst")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("PRS")]
