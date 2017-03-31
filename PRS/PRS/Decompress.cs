@@ -54,15 +54,15 @@
 
         internal static int ReadBit(Context ctx)
         {
-            if (ctx.bits_left == 0)
+            if (ctx.bits == 0)
             {
                 ctx.flag = ReadByte(ctx);
-                ctx.bits_left = 8;
+                ctx.bits = 8;
             }
 
             int flag = ctx.flag & 1;
             ctx.flag >>= 1;
-            ctx.bits_left -= 1;
+            ctx.bits -= 1;
             return flag;
         }
         internal static byte ReadByte(Context ctx)

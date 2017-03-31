@@ -15,20 +15,14 @@ namespace Libraries.PRS
         /// <returns></returns>
         public static byte[] Compress(byte[] data)
         {
-            using (MemoryStream src = new MemoryStream(data))
-            {
-                using (MemoryStream dst = new MemoryStream())
-                {
-                    long size = src.Length - src.Position;
-                    byte[] inputBytes = new byte[size];
-                    src.Read(inputBytes, 0, checked((int)size));
+            Context ctx = new Context(data);
 
-                    PRSCompression.Encode(inputBytes, dst);
-                    return dst.ToArray();
-                }
-            }
+            PRSCompression.Compress(ctx);
+            Array.Resize(ref ctx.dst, ctx.dst_pos);
+
+            return ctx.dst;
         }
-
+        
         /// <summary>
         /// Decompress a byte array and return the processed data in a new byte array
         /// </summary>
@@ -39,9 +33,8 @@ namespace Libraries.PRS
             Context ctx = new Context(data);
 
             int decompressed_size = PRSDecompression.Decompress(ctx, true);
-            Array.Resize(ref ctx.dst, ctx.dst_pos);
+            Array.Resize(ref ctx.dst, decompressed_size);
             ctx.Reset();
-
             PRSDecompression.Decompress(ctx, false);
 
             return ctx.dst;

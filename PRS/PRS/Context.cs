@@ -2,9 +2,9 @@
 {
     class Context
     {
-        internal int bits_left;
-        internal int flag;
-        internal long flag_offset;
+        internal int bits;
+        internal byte flag;
+        internal int flag_pos;
 
         internal byte[] src;
         internal int src_pos;
@@ -22,7 +22,7 @@
             dst_pos = 0;
 
             flag = 0;
-            bits_left = 0;
+            bits = 0;
         }
     }
 }
