@@ -95,7 +95,14 @@ namespace Libraries.ByteArray
         public string ReadStringA(int length)
         {
             string result = this.ReadStringA(length, _position);
-            _position += result.Length;
+            if (length == -1)
+            {
+                _position += result.Length;
+            }
+            else
+            {
+                _position += length;
+            }
             return result;
         }
         /// <summary>
@@ -106,7 +113,14 @@ namespace Libraries.ByteArray
         public string ReadStringW(int length)
         {
             string result = this.ReadStringW(length, _position);
-            _position += (result.Length * 2);
+            if (length == -1)
+            {
+                _position += (result.Length * 2);
+            }
+            else
+            {
+                _position += (length * 2);
+            }
             return result;
         }
     }
