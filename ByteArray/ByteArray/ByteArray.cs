@@ -9,6 +9,7 @@ namespace Libraries.ByteArray
     {
         private byte[] _buffer;
         private int _position;
+        private Endianess _endianess;
 
         /// <summary>
         /// Reference to the internal buffer
@@ -39,9 +40,14 @@ namespace Libraries.ByteArray
                 _position = value;
             }
         }
+        /// <summary>
+        /// Current endianess
+        /// </summary>
+        public Endianess Endianess { get; set; }
 
         /// <summary>
-        /// Default constructor
+        /// Default constructor.
+        /// Little endian by default
         /// </summary>
         /// <param name="size">Size for the internal buffer</param>
         public ByteArray(int size)
@@ -51,8 +57,22 @@ namespace Libraries.ByteArray
                 throw new ArgumentOutOfRangeException(nameof(size));
             }
             _buffer = new byte[size];
+            _endianess = Endianess.LittleEndian;
         }
-
+        /// <summary>
+        /// Constructor with endianess.
+        /// </summary>
+        /// <param name="size"></param>
+        /// <param name="endianess"></param>
+        public ByteArray(int size, Endianess endianess)
+        {
+            if (size < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(size));
+            }
+            _buffer = new byte[size];
+            _endianess = endianess;
+        }
         /// <summary>
         /// Alternative constructor to act as a wrapper for a byte array
         /// </summary>
@@ -60,6 +80,19 @@ namespace Libraries.ByteArray
         public ByteArray(byte[] byteArray)
         {
             _buffer = byteArray ?? throw new ArgumentNullException(nameof(byteArray));
+        }
+        /// <summary>
+        /// Alternative constructor to act as a wrapper for a byte array, with endianess
+        /// </summary>
+        /// <param name="byteArray">Array reference to use as backing array</param>
+        public ByteArray(byte[] byteArray, Endianess endianess)
+        {
+            if (byteArray == null)
+            {
+                throw new ArgumentNullException(nameof(byteArray));
+            }
+            _buffer = byteArray;
+            _endianess = endianess;
         }
 
         /// <summary>
@@ -102,6 +135,28 @@ namespace Libraries.ByteArray
         }
 
         /// <summary>
+        /// Fills all the byte array with the provided value
+        /// </summary>
+        /// <param name="value"></param>
+        public void Fill(byte value)
+        {
+            this.Fill(value, 0, _buffer.Length);
+        }
+        /// <summary>
+        /// Fills a range of elements from the byte array with the provided value starting at index
+        /// </summary>
+        /// <param name="value">Value to fill in the byte array</param>
+        /// <param name="index">Index to start the fill operation</param>
+        /// <param name="length">Amount of byes to fill</param>
+        public void Fill(byte value, int index, int length)
+        {
+            for (int i1 = index; i1 < length; i1++)
+            {
+                _buffer[i1] = value;
+            }
+        }
+
+        /// <summary>
         /// Show up to 16 bytes from the current position
         /// </summary>
         /// <returns></returns>
@@ -116,7 +171,7 @@ namespace Libraries.ByteArray
         }
 
         /// <summary>
-        /// Indexer to access the individual bytes as a byte array
+        /// Indexer to access the individual bytes
         /// </summary>
         /// <param name="offset"></param>
         /// <returns></returns>
@@ -127,7 +182,7 @@ namespace Libraries.ByteArray
         }
 
         /// <summary>
-        /// Advances the internal position until the pad boundary is met, zeroing the clearing the array bytes in the process
+        /// Advances the internal position until the pad boundary is met, zeroing the padded bytes in the process
         /// </summary>
         /// <param name="padding">Number of bytes to pad</param>
         public void Pad(int padding)

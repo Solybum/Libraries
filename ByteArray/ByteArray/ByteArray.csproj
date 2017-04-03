@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ByteArray.cs" />
+    <Compile Include="ByteArrayEndianess.cs" />
     <Compile Include="ByteArrayRead.cs" />
     <Compile Include="ByteArrayWrite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
