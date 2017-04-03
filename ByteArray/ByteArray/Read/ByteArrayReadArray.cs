@@ -20,7 +20,7 @@ namespace Libraries.ByteArray
             length += index;
             while (index < length)
             {
-                array[index] = ReadInt8(position);
+                array[index] = ReadI8(position);
                 position += 1;
                 index++;
             }
@@ -37,7 +37,7 @@ namespace Libraries.ByteArray
             length += index;
             while (index < length)
             {
-                array[index] = ReadUInt8(position);
+                array[index] = ReadU8(position);
                 position += 1;
                 index++;
             }
@@ -54,7 +54,7 @@ namespace Libraries.ByteArray
             length += index;
             while (index < length)
             {
-                array[index] = ReadInt16(position);
+                array[index] = ReadI6(position);
                 position += 2;
                 index++;
             }
@@ -71,7 +71,7 @@ namespace Libraries.ByteArray
             length += index;
             while (index < length)
             {
-                array[index] = ReadUInt16(position);
+                array[index] = ReadU16(position);
                 position += 2;
                 index++;
             }
@@ -88,7 +88,7 @@ namespace Libraries.ByteArray
             length += index;
             while (index < length)
             {
-                array[index] = ReadInt32(position);
+                array[index] = ReadI32(position);
                 position += 4;
                 index++;
             }
@@ -105,7 +105,7 @@ namespace Libraries.ByteArray
             length += index;
             while (index < length)
             {
-                array[index] = ReadUInt32(position);
+                array[index] = ReadU32(position);
                 position += 4;
                 index++;
             }
@@ -122,7 +122,7 @@ namespace Libraries.ByteArray
             length += index;
             while (index < length)
             {
-                array[index] = ReadInt64(position);
+                array[index] = ReadI64(position);
                 position += 8;
                 index++;
             }
@@ -139,7 +139,7 @@ namespace Libraries.ByteArray
             length += index;
             while (index < length)
             {
-                array[index] = ReadUInt64(position);
+                array[index] = ReadU64(position);
                 position += 8;
                 index++;
             }
@@ -156,7 +156,7 @@ namespace Libraries.ByteArray
             length += index;
             while (index < length)
             {
-                array[index] = ReadSingle(position);
+                array[index] = ReadF32(position);
                 position += 4;
                 index++;
             }
@@ -173,7 +173,7 @@ namespace Libraries.ByteArray
             length += index;
             while (index < length)
             {
-                array[index] = ReadDouble(position);
+                array[index] = ReadF64(position);
                 position += 8;
                 index++;
             }
