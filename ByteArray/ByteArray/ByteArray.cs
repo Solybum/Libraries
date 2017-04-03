@@ -7,8 +7,22 @@ namespace Libraries.ByteArray
     /// </summary>
     public partial class ByteArray
     {
+        /// <summary>
+        /// Temporary buffer for floats.
+        /// It's initialized right away
+        /// </summary>
+        private byte[] _temp = new byte[8];
+        /// <summary>
+        /// Internal buffer
+        /// </summary>
         private byte[] _buffer;
+        /// <summary>
+        /// Internal position
+        /// </summary>
         private int _position;
+        /// <summary>
+        /// Internal endianess
+        /// </summary>
         private Endianess _endianess;
 
         /// <summary>
@@ -85,6 +99,7 @@ namespace Libraries.ByteArray
         /// Alternative constructor to act as a wrapper for a byte array, with endianess
         /// </summary>
         /// <param name="byteArray">Array reference to use as backing array</param>
+        /// <param name="endianess"></param>
         public ByteArray(byte[] byteArray, Endianess endianess)
         {
             if (byteArray == null)
