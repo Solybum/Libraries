@@ -184,7 +184,7 @@ namespace Libraries.ByteArray
             {
                 _temp[0] = _buffer[position + 7];
                 _temp[1] = _buffer[position + 6];
-                _temp[2] = _buffer[position + 4];
+                _temp[2] = _buffer[position + 5];
                 _temp[3] = _buffer[position + 4];
                 _temp[4] = _buffer[position + 3];
                 _temp[5] = _buffer[position + 2];
