@@ -57,7 +57,11 @@ namespace Libraries.ByteArray
         /// <summary>
         /// Current endianess
         /// </summary>
-        public Endianess Endianess { get; set; }
+        public Endianess Endianess
+        {
+            get { return _endianess; }
+            set { _endianess = value; }
+        }
 
         /// <summary>
         /// Default constructor.
