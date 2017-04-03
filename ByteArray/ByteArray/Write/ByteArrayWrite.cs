@@ -369,7 +369,7 @@ namespace Libraries.ByteArray
         /// Writes a <see cref="bool"/> without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void Write(bool value, int position)
         {
@@ -380,7 +380,7 @@ namespace Libraries.ByteArray
         /// Writes a 1 byte <see cref="char"/> without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void WriteCharA(char value, int position)
         {
@@ -391,7 +391,7 @@ namespace Libraries.ByteArray
         /// Writes a 2 byte <see cref="char"/> without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void WriteCharW(char value, int position)
         {
@@ -404,7 +404,7 @@ namespace Libraries.ByteArray
         /// Writes a <see cref="sbyte"/> without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void Write(sbyte value, int position)
         {
@@ -415,7 +415,7 @@ namespace Libraries.ByteArray
         /// Writes a <see cref="byte"/> without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void Write(byte value, int position)
         {
@@ -426,7 +426,7 @@ namespace Libraries.ByteArray
         /// Writes a <see cref="short"/> without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void Write(short value, int position)
         {
@@ -438,7 +438,7 @@ namespace Libraries.ByteArray
         /// Writes a <see cref="ushort"/> without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void Write(ushort value, int position)
         {
@@ -450,7 +450,7 @@ namespace Libraries.ByteArray
         /// Writes a <see cref="int"/> without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void Write(int value, int position)
         {
@@ -464,7 +464,7 @@ namespace Libraries.ByteArray
         /// Writes a <see cref="uint"/> without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void Write(uint value, int position)
         {
@@ -478,7 +478,7 @@ namespace Libraries.ByteArray
         /// Writes a <see cref="long"/> without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void Write(long value, int position)
         {
@@ -496,7 +496,7 @@ namespace Libraries.ByteArray
         /// Writes a <see cref="ulong"/> without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void Write(ulong value, int position)
         {
@@ -514,7 +514,7 @@ namespace Libraries.ByteArray
         /// Writes a <see cref="float"/> without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void Write(float value, int position)
         {
@@ -525,7 +525,7 @@ namespace Libraries.ByteArray
         /// Writes a <see cref="double"/> without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void Write(double value, int position)
         {
@@ -539,7 +539,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         public void Write(sbyte[] array, int index, int length, int position)
         {
             length += index;
@@ -556,7 +556,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         public void Write(byte[] array, int index, int length, int position)
         {
             length += index;
@@ -573,7 +573,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         public void Write(short[] array, int index, int length, int position)
         {
             length += index;
@@ -590,7 +590,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         public void Write(ushort[] array, int index, int length, int position)
         {
             length += index;
@@ -607,7 +607,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         public void Write(int[] array, int index, int length, int position)
         {
             length += index;
@@ -624,7 +624,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         public void Write(uint[] array, int index, int length, int position)
         {
             length += index;
@@ -641,7 +641,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         public void Write(long[] array, int index, int length, int position)
         {
             length += index;
@@ -658,7 +658,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         public void Write(ulong[] array, int index, int length, int position)
         {
             length += index;
@@ -675,7 +675,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         public void Write(float[] array, int index, int length, int position)
         {
             length += index;
@@ -692,7 +692,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         public void Write(double[] array, int index, int length, int position)
         {
             length += index;
@@ -712,7 +712,7 @@ namespace Libraries.ByteArray
         /// <param name="index">Starting position of the string</param>
         /// <param name="length">Amount of characters to write</param>
         /// <param name="nullTerminated">Null terminated the string in the buffer, this null character is not counted in the length parameter</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void WriteStringA(string text, int index, int length, bool nullTerminated, int position)
         {
@@ -742,7 +742,7 @@ namespace Libraries.ByteArray
         /// <param name="index">Starting position of the string</param>
         /// <param name="length">Amount of characters to write</param>
         /// <param name="nullTerminated">Null terminated the string in the buffer, this null character is not counted in the length parameter</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void WriteStringW(string text, int index, int length, bool nullTerminated, int position)
         {

@@ -46,8 +46,8 @@
   <ItemGroup>
     <Compile Include="ByteArray.cs" />
     <Compile Include="ByteArrayEndianess.cs" />
-    <Compile Include="ByteArrayRead.cs" />
-    <Compile Include="ByteArrayWrite.cs" />
+    <Compile Include="Read\ByteArrayRead.cs" />
+    <Compile Include="Write\ByteArrayWrite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

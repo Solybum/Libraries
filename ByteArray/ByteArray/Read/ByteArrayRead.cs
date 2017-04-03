@@ -15,26 +15,6 @@ namespace Libraries.ByteArray
             return result;
         }
         /// <summary>
-        /// Reads a 1 byte <see cref="char"/> advancing the internal position
-        /// </summary>
-        /// <returns></returns>
-        public char ReadCharA()
-        {
-            char result = Convert.ToChar(_buffer[_position]);
-            _position += 1;
-            return result;
-        }
-        /// <summary>
-        /// Reads a 2 byte <see cref="char"/> advancing the internal position
-        /// </summary>
-        /// <returns></returns>
-        public char ReadCharW()
-        {
-            char result = Convert.ToChar(_buffer[_position + 0] | _buffer[_position + 1] << 8);
-            _position += 2;
-            return result;
-        }
-        /// <summary>
         /// Reads a <see cref="sbyte"/> advancing the internal position
         /// </summary>
         /// <returns></returns>
@@ -289,56 +269,11 @@ namespace Libraries.ByteArray
                 index++;
             }
         }
-
-        /// <summary>
-        /// Reads an ASCII string until the target length is reached or null character is found, advancing the internal position
-        /// </summary>
-        /// <param name="length">Maximum length of the resulting string</param>
-        /// <returns></returns>
-        public string ReadStringA(int length)
-        {
-            string result = "";
-            while (result.Length < length)
-            {
-                if (_buffer[_position] == 0)
-                {
-                    break;
-                }
-                result += ReadCharA();
-            }
-
-            length -= result.Length;
-            _position += length;
-            
-            return result;
-        }
-        /// <summary>
-        /// Reads an UNICODE string until the target length is reached or null character is found, advancing the internal position
-        /// </summary>
-        /// <param name="length">Maximum length of the resulting string</param>
-        /// <returns></returns>
-        public string ReadStringW(int length)
-        {
-            string result = "";
-            while (result.Length < length)
-            {
-                if (_buffer[_position] == 0)
-                {
-                    break;
-                }
-                result += ReadCharW();
-            }
-
-            length -= result.Length;
-            _position += (length * 2);
-
-            return result;
-        }
         
         /// <summary>
         /// Reads a <see cref="bool"/> without advancing the internal position
         /// </summary>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         /// <returns></returns>
         public bool ReadBoolean(int position)
         {
@@ -347,31 +282,9 @@ namespace Libraries.ByteArray
             return result;
         }
         /// <summary>
-        /// Reads a 1 byte <see cref="char"/> without advancing the internal position
-        /// </summary>
-        /// <param name="position">Starting position of the internal buffer</param>
-        /// <returns></returns>
-        public char ReadCharA(int position)
-        {
-            char result = Convert.ToChar(_buffer[position]);
-            // position += 1;
-            return result;
-        }
-        /// <summary>
-        /// Reads a 2 byte <see cref="char"/> without advancing the internal position
-        /// </summary>
-        /// <param name="position">Starting position of the internal buffer</param>
-        /// <returns></returns>
-        public char ReadCharW(int position)
-        {
-            char result = Convert.ToChar(_buffer[position + 0] | _buffer[position + 1] << 8);
-            // position += 2;
-            return result;
-        }
-        /// <summary>
         /// Reads a <see cref="sbyte"/> without advancing the internal position
         /// </summary>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         /// <returns></returns>
         public sbyte ReadInt8(int position)
         {
@@ -382,7 +295,7 @@ namespace Libraries.ByteArray
         /// <summary>
         /// Reads a <see cref="byte"/> without advancing the internal position
         /// </summary>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         /// <returns></returns>
         public byte ReadUInt8(int position)
         {
@@ -393,7 +306,7 @@ namespace Libraries.ByteArray
         /// <summary>
         /// Reads a <see cref="short"/> without advancing the internal position
         /// </summary>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         /// <returns></returns>
         public short ReadInt16(int position)
         {
@@ -404,7 +317,7 @@ namespace Libraries.ByteArray
         /// <summary>
         /// Reads a <see cref="ushort"/> without advancing the internal position
         /// </summary>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         /// <returns></returns>
         public ushort ReadUInt16(int position)
         {
@@ -415,7 +328,7 @@ namespace Libraries.ByteArray
         /// <summary>
         /// Reads a <see cref="int"/> without advancing the internal position
         /// </summary>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         /// <returns></returns>
         public int ReadInt32(int position)
         {
@@ -426,7 +339,7 @@ namespace Libraries.ByteArray
         /// <summary>
         /// Reads a <see cref="uint"/> without advancing the internal position
         /// </summary>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         /// <returns></returns>
         public uint ReadUInt32(int position)
         {
@@ -437,7 +350,7 @@ namespace Libraries.ByteArray
         /// <summary>
         /// Reads a <see cref="long"/> without advancing the internal position
         /// </summary>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         /// <returns></returns>
         public long ReadInt64(int position)
         {
@@ -450,7 +363,7 @@ namespace Libraries.ByteArray
         /// <summary>
         /// Reads a <see cref="ulong"/> without advancing the internal position
         /// </summary>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         /// <returns></returns>
         public ulong ReadUInt64(int position)
         {
@@ -463,7 +376,7 @@ namespace Libraries.ByteArray
         /// <summary>
         /// Reads a <see cref="float"/> without advancing the internal position
         /// </summary>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         /// <returns></returns>
         public float ReadSingle(int position)
         {
@@ -474,7 +387,7 @@ namespace Libraries.ByteArray
         /// <summary>
         /// Reads a <see cref="double"/> without advancing the internal position
         /// </summary>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         /// <returns></returns>
         public double ReadDouble(int position)
         {
@@ -489,7 +402,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         public void Read(sbyte[] array, int index, int length, int position)
         {
             length += index;
@@ -506,7 +419,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         public void Read(byte[] array, int index, int length, int position)
         {
             length += index;
@@ -523,7 +436,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         public void Read(short[] array, int index, int length, int position)
         {
             length += index;
@@ -540,7 +453,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         public void Read(ushort[] array, int index, int length, int position)
         {
             length += index;
@@ -557,7 +470,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         public void Read(int[] array, int index, int length, int position)
         {
             length += index;
@@ -574,7 +487,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         public void Read(uint[] array, int index, int length, int position)
         {
             length += index;
@@ -591,7 +504,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         public void Read(long[] array, int index, int length, int position)
         {
             length += index;
@@ -608,7 +521,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         public void Read(ulong[] array, int index, int length, int position)
         {
             length += index;
@@ -625,7 +538,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         public void Read(float[] array, int index, int length, int position)
         {
             length += index;
@@ -642,7 +555,7 @@ namespace Libraries.ByteArray
         /// <param name="array"></param>
         /// <param name="index">Starting position in the array</param>
         /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">Starting position of the internal buffer</param>
+        /// <param name="position">ByteArray index to read from</param>
         public void Read(double[] array, int index, int length, int position)
         {
             length += index;
@@ -652,47 +565,6 @@ namespace Libraries.ByteArray
                 position += 8;
                 index++;
             }
-        }
-
-        /// <summary>
-        /// Reads an ASCII string until the target length is reached or null character is found, without advancing the internal position
-        /// </summary>
-        /// <param name="length">Maximum length of the resulting string</param>
-        /// <param name="position">Starting position of the internal buffer</param>
-        /// <returns></returns>
-        public string ReadStringA(int length, int position)
-        {
-            string result = "";
-            while (result.Length < length)
-            {
-                if (_buffer[position] == 0)
-                {
-                    break;
-                }
-                result += ReadCharA(position);
-                position += 1;
-            }
-            return result;
-        }
-        /// <summary>
-        /// Reads an UNICODE string until the target length is reached or null character is found, without advancing the internal position
-        /// </summary>
-        /// <param name="length">Maximum length of the resulting string</param>
-        /// <param name="position">Starting position of the internal buffer</param>
-        /// <returns></returns>
-        public string ReadStringW(int length, int position)
-        {
-            string result = "";
-            while (result.Length < length)
-            {
-                if (_buffer[position] == 0)
-                {
-                    break;
-                }
-                result += ReadCharW(position);
-                position += 2;
-            }
-            return result;
         }
     }
 }
