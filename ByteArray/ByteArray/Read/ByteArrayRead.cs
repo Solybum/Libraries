@@ -39,7 +39,7 @@ namespace Libraries.ByteArray
         /// </summary>
         /// <param name="position">ByteArray index to read from</param>
         /// <returns></returns>
-        public short ReadI6(int position)
+        public short ReadI16(int position)
         {
             short result;
             if (_endianess == Endianess.BigEndian)
@@ -235,7 +235,7 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public short ReadI16()
         {
-            short result = this.ReadI6(_position);
+            short result = this.ReadI16(_position);
             _position += 2;
             return result;
         }

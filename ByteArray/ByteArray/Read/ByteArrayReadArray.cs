@@ -54,7 +54,7 @@ namespace Libraries.ByteArray
             length += index;
             while (index < length)
             {
-                array[index] = ReadI6(position);
+                array[index] = ReadI16(position);
                 position += 2;
                 index++;
             }
