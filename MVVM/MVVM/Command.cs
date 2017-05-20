@@ -1,47 +1,46 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Windows.Input;
 
 namespace MVVM
 {
     public class Command : ICommand
     {
-        #region Fields
-        readonly Action<object> _action;
-        readonly Predicate<object> _canExecute;
-        #endregion
+        private readonly Predicate<object> _canExecute;
+        private readonly Action<object> _execute;
 
-        #region Constructors
-        public Command(Action<object> execute) : this(execute, ((object param) => true)) { }
+        public event EventHandler CanExecuteChanged;
+
+        public Command(Action<object> execute) : this(execute, null)
+        {
+        }
+
         public Command(Action<object> execute, Predicate<object> canExecute)
         {
-            if (execute == null)
-            {
-                throw new ArgumentNullException("execute");
-            }
-            else
-            {
-                _action = execute;
-                _canExecute = canExecute;
-            }
+            _execute = execute;
+            _canExecute = canExecute;
         }
-        #endregion
 
-        #region ICommand Members
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
-        [DebuggerStepThrough]
         public bool CanExecute(object parameter)
         {
+            if (_canExecute == null)
+            {
+                return true;
+            }
+
             return _canExecute(parameter);
         }
+
         public void Execute(object parameter)
         {
-            _action(parameter);
+            _execute(parameter);
         }
-        #endregion
+
+        public void RaiseCanExecuteChanged()
+        {
+            if (CanExecuteChanged != null)
+            {
+                CanExecuteChanged(this, EventArgs.Empty);
+            }
+        }
     }
 }
