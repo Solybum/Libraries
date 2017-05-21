@@ -9,6 +9,9 @@ using System.Runtime.CompilerServices;
 
 namespace MVVM
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public abstract class BindableBase : INotifyPropertyChanged, IDataErrorInfo
     {
         #region Fields
@@ -19,48 +22,47 @@ namespace MVVM
 
         #region Protected
 
+        ///// <summary>
+        ///// Sets the value of a property.
+        ///// </summary>
+        ///// <typeparam name="T">The type of the property value.</typeparam>
+        ///// <param name="propertySelector">Expression tree contains the property definition.</param>
+        ///// <param name="value">The property value.</param>
+        //protected void SetValue<T>(Expression<Func<T>> propertySelector, T value)
+        //{
+        //    string propertyName = GetPropertyName(propertySelector);
+
+        //    SetValue<T>(value, propertyName);
+        //}
+
         /// <summary>
         /// Sets the value of a property.
         /// </summary>
         /// <typeparam name="T">The type of the property value.</typeparam>
-        /// <param name="propertySelector">Expression tree contains the property definition.</param>
         /// <param name="value">The property value.</param>
-        protected void SetValue<T>(Expression<Func<T>> propertySelector, T value)
-        {
-            string propertyName = GetPropertyName(propertySelector);
-
-            SetValue<T>(propertyName, value);
-        }
-
-        /// <summary>
-        /// Sets the value of a property.
-        /// </summary>
-        /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="propertyName">The name of the property.</param>
-        /// <param name="value">The property value.</param>
-        protected void SetValue<T>(string propertyName, T value)
+        protected void SetValue<T>(T value, [CallerMemberName] string propertyName = null)
         {
             if (string.IsNullOrEmpty(propertyName))
             {
                 throw new ArgumentException("Invalid property name", propertyName);
             }
-
             _values[propertyName] = value;
             NotifyPropertyChanged(propertyName);
         }
 
-        /// <summary>
-        /// Gets the value of a property.
-        /// </summary>
-        /// <typeparam name="T">The type of the property value.</typeparam>
-        /// <param name="propertySelector">Expression tree contains the property definition.</param>
-        /// <returns>The value of the property or default value if not exist.</returns>
-        protected T GetValue<T>(Expression<Func<T>> propertySelector)
-        {
-            string propertyName = GetPropertyName(propertySelector);
-
-            return GetValue<T>(propertyName);
-        }
+        ///// <summary>
+        ///// Gets the value of a property.
+        ///// </summary>
+        ///// <typeparam name="T">The type of the property value.</typeparam>
+        ///// <param name="propertySelector">Expression tree contains the property definition.</param>
+        ///// <returns>The value of the property or default value if not exist.</returns>
+        //protected T GetValue<T>(Expression<Func<T>> propertySelector)
+        //{
+        //    string propertyName = GetPropertyName(propertySelector);
+        //
+        //    return GetValue<T>(propertyName);
+        //}
 
         /// <summary>
         /// Gets the value of a property.
@@ -68,7 +70,7 @@ namespace MVVM
         /// <typeparam name="T">The type of the property value.</typeparam>
         /// <param name="propertyName">The name of the property.</param>
         /// <returns>The value of the property or default value if not exist.</returns>
-        protected T GetValue<T>(string propertyName)
+        protected T GetValue<T>([CallerMemberName] string propertyName = null)
         {
             if (string.IsNullOrEmpty(propertyName))
             {
@@ -99,7 +101,7 @@ namespace MVVM
 
             string error = string.Empty;
             var value = GetValue(propertyName);
-            var results = new List<System.ComponentModel.DataAnnotations.ValidationResult>(1);
+            var results = new List<ValidationResult>(1);
             var result = Validator.TryValidateProperty(
                 value,
                 new ValidationContext(this, null, null)
@@ -130,7 +132,7 @@ namespace MVVM
         /// Raises this object's PropertyChanged event.
         /// </summary>
         /// <param name="propertyName">The property that has a new value.</param>
-        protected void NotifyPropertyChanged(string propertyName)
+        protected void NotifyPropertyChanged([CallerMemberName] string propertyName = null)
         {
             this.VerifyPropertyName(propertyName);
 
@@ -142,17 +144,17 @@ namespace MVVM
             }
         }
 
-        protected void NotifyPropertyChanged<T>(Expression<Func<T>> propertySelector)
-        {
-            var propertyChanged = PropertyChanged;
-            if (propertyChanged != null)
-            {
-                string propertyName = GetPropertyName(propertySelector);
-                propertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
+        //protected void NotifyPropertyChanged<T>(Expression<Func<T>> propertySelector)
+        //{
+        //    var propertyChanged = PropertyChanged;
+        //    if (propertyChanged != null)
+        //    {
+        //        string propertyName = GetPropertyName(propertySelector);
+        //        propertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        //    }
+        //}
 
-        #endregion // INotifyPropertyChanged Members
+        #endregion
 
         #region Data Validation
 
@@ -176,16 +178,16 @@ namespace MVVM
 
         #region Privates
 
-        private string GetPropertyName(LambdaExpression expression)
-        {
-            var memberExpression = expression.Body as MemberExpression;
-            if (memberExpression == null)
-            {
-                throw new InvalidOperationException();
-            }
+        //private string GetPropertyName(LambdaExpression expression)
+        //{
+        //    var memberExpression = expression.Body as MemberExpression;
+        //    if (memberExpression == null)
+        //    {
+        //        throw new InvalidOperationException();
+        //    }
 
-            return memberExpression.Member.Name;
-        }
+        //    return memberExpression.Member.Name;
+        //}
 
         private object GetValue(string propertyName)
         {
@@ -239,6 +241,6 @@ namespace MVVM
         /// </summary>
         protected virtual bool ThrowOnInvalidPropertyName { get; private set; }
 
-        #endregion // Debugging Aides
+        #endregion
     }
 }
