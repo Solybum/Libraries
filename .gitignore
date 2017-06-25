@@ -262,24 +262,8 @@ __pycache__/
 
 # Library binaries
 
-# Avalon Edit
-!AvalonEdit/bin/
-
 # MySQL Connector Net
 !MySQL Connector/bin/
 
-# Newtonsoft.Json compiled binaries
-!Newtonsoft.Json/bin/
-!Newtonsoft.Json/bin/*
-
-# SpreadsheetLight
-!SpreadsheetLight/bin/
-
 # SQLite
 !SQLite/bin/
-
-# WPF Animated GIF
-!WPF Animated GIF/bin/
-
-# WPF.Toolkit
-!WPF.Toolkit/bin/
