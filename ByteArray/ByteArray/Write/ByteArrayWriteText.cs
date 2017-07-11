@@ -12,7 +12,7 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public void WriteCharA(char value, int position)
         {
-            _buffer[position] = Convert.ToByte(value);
+            this._buffer[position] = Convert.ToByte(value);
         }
         /// <summary>
         /// Writes a 2 byte <see cref="char"/> without advancing the internal position
@@ -23,8 +23,8 @@ namespace Libraries.ByteArray
         public void WriteCharW(char value, int position)
         {
             ushort tmp = Convert.ToUInt16(value);
-            _buffer[position + 0] = (byte)tmp;
-            _buffer[position + 1] = (byte)(tmp >> 8);
+            this._buffer[position + 0] = (byte)tmp;
+            this._buffer[position + 1] = (byte)(tmp >> 8);
         }
 
         /// <summary>
@@ -34,8 +34,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public void WriteCharA(char value)
         {
-            this.WriteCharA(value, _position);
-            _position += 1;
+            this.WriteCharA(value, this._position);
+            this._position += 1;
         }
         /// <summary>
         /// Writes a 2 byte <see cref="char"/> advancing the internal position
@@ -44,8 +44,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public void WriteCharW(char value)
         {
-            this.WriteCharW(value, _position);
-            _position += 2;
+            this.WriteCharW(value, this._position);
+            this._position += 2;
         }
 
         /// <summary>
@@ -120,11 +120,11 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public void WriteStringA(string text, int index, int length, bool nullTerminated)
         {
-            this.WriteStringA(text, index, length, nullTerminated, _position);
-            _position += length;
+            this.WriteStringA(text, index, length, nullTerminated, this._position);
+            this._position += length;
             if (nullTerminated)
             {
-                _position += 1;
+                this._position += 1;
             }
         }
         /// <summary>
@@ -138,11 +138,11 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public void WriteStringW(string text, int index, int length, bool nullTerminated)
         {
-            this.WriteStringW(text, index, length, nullTerminated, _position);
-            _position += (length * 2);
+            this.WriteStringW(text, index, length, nullTerminated, this._position);
+            this._position += (length * 2);
             if (nullTerminated)
             {
-                _position += 2;
+                this._position += 2;
             }
         }
     }

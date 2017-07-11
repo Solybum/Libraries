@@ -187,8 +187,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Read(sbyte[] array, int index, int length)
         {
-            this.Read(array, index, length, _position);
-            _position += (length * 1);
+            this.Read(array, index, length, this._position);
+            this._position += (length * 1);
         }
         /// <summary>
         /// Reads data into the array, without advancing the internal position
@@ -198,8 +198,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Read(byte[] array, int index, int length)
         {
-            this.Read(array, index, length, _position);
-            _position += (length * 1);
+            this.Read(array, index, length, this._position);
+            this._position += (length * 1);
         }
         /// <summary>
         /// Reads data into the array, without advancing the internal position
@@ -209,8 +209,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Read(short[] array, int index, int length)
         {
-            this.Read(array, index, length, _position);
-            _position += (length * 2);
+            this.Read(array, index, length, this._position);
+            this._position += (length * 2);
         }
         /// <summary>
         /// Reads data into the array, without advancing the internal position
@@ -220,8 +220,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Read(ushort[] array, int index, int length)
         {
-            this.Read(array, index, length, _position);
-            _position += (length * 2);
+            this.Read(array, index, length, this._position);
+            this._position += (length * 2);
         }
         /// <summary>
         /// Reads data into the array, without advancing the internal position
@@ -231,8 +231,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Read(int[] array, int index, int length)
         {
-            this.Read(array, index, length, _position);
-            _position += (length * 4);
+            this.Read(array, index, length, this._position);
+            this._position += (length * 4);
         }
         /// <summary>
         /// Reads data into the array, without advancing the internal position
@@ -242,8 +242,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Read(uint[] array, int index, int length)
         {
-            this.Read(array, index, length, _position);
-            _position += (length * 4);
+            this.Read(array, index, length, this._position);
+            this._position += (length * 4);
         }
         /// <summary>
         /// Reads data into the array, without advancing the internal position
@@ -253,8 +253,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Read(long[] array, int index, int length)
         {
-            this.Read(array, index, length, _position);
-            _position += (length * 8);
+            this.Read(array, index, length, this._position);
+            this._position += (length * 8);
         }
         /// <summary>
         /// Reads data into the array, without advancing the internal position
@@ -264,8 +264,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Read(ulong[] array, int index, int length)
         {
-            this.Read(array, index, length, _position);
-            _position += (length * 8);
+            this.Read(array, index, length, this._position);
+            this._position += (length * 8);
         }
         /// <summary>
         /// Reads data into the array, without advancing the internal position
@@ -275,8 +275,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Read(float[] array, int index, int length)
         {
-            this.Read(array, index, length, _position);
-            _position += (length * 4);
+            this.Read(array, index, length, this._position);
+            this._position += (length * 4);
         }
         /// <summary>
         /// Reads data into the array, without advancing the internal position
@@ -286,8 +286,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Read(double[] array, int index, int length)
         {
-            this.Read(array, index, length, _position);
-            _position += (length * 8);
+            this.Read(array, index, length, this._position);
+            this._position += (length * 8);
         }
     }
 }

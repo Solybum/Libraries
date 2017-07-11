@@ -11,7 +11,7 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public char ReadCharA(int position)
         {
-            char result = Convert.ToChar(_buffer[position]);
+            char result = Convert.ToChar(this._buffer[position]);
             return result;
         }
         /// <summary>
@@ -21,7 +21,7 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public char ReadCharW(int position)
         {
-            char result = Convert.ToChar(_buffer[position + 0] | _buffer[position + 1] << 8);
+            char result = Convert.ToChar(this._buffer[position + 0] | this._buffer[position + 1] << 8);
             return result;
         }
 
@@ -31,8 +31,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public char ReadCharA()
         {
-            char result = this.ReadCharA(_position);
-            _position += 1;
+            char result = this.ReadCharA(this._position);
+            this._position += 1;
             return result;
         }
         /// <summary>
@@ -41,8 +41,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public char ReadCharW()
         {
-            char result = this.ReadCharW(_position);
-            _position += 2;
+            char result = this.ReadCharW(this._position);
+            this._position += 2;
             return result;
         }
 
@@ -57,7 +57,7 @@ namespace Libraries.ByteArray
             string result = "";
             while (length == -1 || result.Length < length)
             {
-                if (_buffer[position] == 0)
+                if (this._buffer[position] == 0)
                 {
                     break;
                 }
@@ -77,7 +77,7 @@ namespace Libraries.ByteArray
             string result = "";
             while (length == -1 || result.Length < length)
             {
-                if (_buffer[position] == 0)
+                if (this._buffer[position] == 0)
                 {
                     break;
                 }
@@ -94,14 +94,14 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public string ReadStringA(int length)
         {
-            string result = this.ReadStringA(length, _position);
+            string result = this.ReadStringA(length, this._position);
             if (length == -1)
             {
-                _position += result.Length;
+                this._position += result.Length;
             }
             else
             {
-                _position += length;
+                this._position += length;
             }
             return result;
         }
@@ -112,14 +112,14 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public string ReadStringW(int length)
         {
-            string result = this.ReadStringW(length, _position);
+            string result = this.ReadStringW(length, this._position);
             if (length == -1)
             {
-                _position += (result.Length * 2);
+                this._position += (result.Length * 2);
             }
             else
             {
-                _position += (length * 2);
+                this._position += (length * 2);
             }
             return result;
         }

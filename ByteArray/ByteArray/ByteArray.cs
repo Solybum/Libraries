@@ -30,28 +30,28 @@ namespace Libraries.ByteArray
         /// </summary>
         public byte[] Buffer
         {
-            get { return _buffer; }
+            get { return this._buffer; }
         }
         /// <summary>
         /// Length of the internal buffer
         /// </summary>
         public int Length
         {
-            get { return _buffer.Length; }
+            get { return this._buffer.Length; }
         }
         /// <summary>
         /// Position in the internal buffer
         /// </summary>
         public int Position
         {
-            get { return _position; }
+            get { return this._position; }
             set
             {
-                if (value < 0 || value > _buffer.Length)
+                if (value < 0 || value > this._buffer.Length)
                 {
                     throw new ArgumentOutOfRangeException(nameof(value));
                 }
-                _position = value;
+                this._position = value;
             }
         }
         /// <summary>
@@ -59,8 +59,8 @@ namespace Libraries.ByteArray
         /// </summary>
         public Endianess Endianess
         {
-            get { return _endianess; }
-            set { _endianess = value; }
+            get { return this._endianess; }
+            set { this._endianess = value; }
         }
 
         /// <summary>
@@ -74,8 +74,8 @@ namespace Libraries.ByteArray
             {
                 throw new ArgumentOutOfRangeException(nameof(size));
             }
-            _buffer = new byte[size];
-            _endianess = Endianess.LittleEndian;
+            this._buffer = new byte[size];
+            this._endianess = Endianess.LittleEndian;
         }
         /// <summary>
         /// Constructor with endianess.
@@ -88,8 +88,8 @@ namespace Libraries.ByteArray
             {
                 throw new ArgumentOutOfRangeException(nameof(size));
             }
-            _buffer = new byte[size];
-            _endianess = endianess;
+            this._buffer = new byte[size];
+            this._endianess = endianess;
         }
         /// <summary>
         /// Alternative constructor to act as a wrapper for a byte array
@@ -97,7 +97,7 @@ namespace Libraries.ByteArray
         /// <param name="byteArray">Array reference to use as backing array</param>
         public ByteArray(byte[] byteArray)
         {
-            _buffer = byteArray ?? throw new ArgumentNullException(nameof(byteArray));
+            this._buffer = byteArray ?? throw new ArgumentNullException(nameof(byteArray));
         }
         /// <summary>
         /// Alternative constructor to act as a wrapper for a byte array, with endianess
@@ -110,8 +110,8 @@ namespace Libraries.ByteArray
             {
                 throw new ArgumentNullException(nameof(byteArray));
             }
-            _buffer = byteArray;
-            _endianess = endianess;
+            this._buffer = byteArray;
+            this._endianess = endianess;
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace Libraries.ByteArray
         /// <param name="size">New size of the internal array</param>
         public void Resize(int size)
         {
-            if (size == _buffer.Length)
+            if (size == this._buffer.Length)
             {
                 return;
             }
@@ -129,10 +129,10 @@ namespace Libraries.ByteArray
                 throw new ArgumentOutOfRangeException(nameof(size));
             }
 
-            Array.Resize(ref _buffer, size);
-            if (_position > size)
+            Array.Resize(ref this._buffer, size);
+            if (this._position > size)
             {
-                _position = size;
+                this._position = size;
             }
         }
 
@@ -141,7 +141,7 @@ namespace Libraries.ByteArray
         /// </summary>
         public void Clear()
         {
-            this.Clear(0, _buffer.Length);
+            this.Clear(0, this._buffer.Length);
         }
         /// <summary>
         /// Sets a range of elements from the array to their default value
@@ -150,7 +150,7 @@ namespace Libraries.ByteArray
         /// <param name="length">The number of elements to clear</param>
         public void Clear(int index, int length)
         {
-            Array.Clear(_buffer, index, length);
+            Array.Clear(this._buffer, index, length);
         }
 
         /// <summary>
@@ -159,7 +159,7 @@ namespace Libraries.ByteArray
         /// <param name="value"></param>
         public void Fill(byte value)
         {
-            this.Fill(value, 0, _buffer.Length);
+            this.Fill(value, 0, this._buffer.Length);
         }
         /// <summary>
         /// Fills a range of elements from the byte array with the provided value starting at index
@@ -171,7 +171,7 @@ namespace Libraries.ByteArray
         {
             for (int i1 = index; i1 < length; i1++)
             {
-                _buffer[i1] = value;
+                this._buffer[i1] = value;
             }
         }
 
@@ -181,12 +181,12 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public override string ToString()
         {
-            int tslen = Length - _position;
+            int tslen = this.Length - this._position;
             if (tslen > 16)
             {
                 tslen = 16;
             }
-            return string.Format("0x{0:X8}: {1}", _position, BitConverter.ToString(_buffer, _position, tslen).Replace("-", " "));
+            return string.Format("0x{0:X8}: {1}", this._position, BitConverter.ToString(this._buffer, this._position, tslen).Replace("-", " "));
         }
 
         /// <summary>
@@ -196,8 +196,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public byte this[int offset]
         {
-            get { return _buffer[offset]; }
-            set { _buffer[offset] = value; }
+            get { return this._buffer[offset]; }
+            set { this._buffer[offset] = value; }
         }
 
         /// <summary>
@@ -206,9 +206,9 @@ namespace Libraries.ByteArray
         /// <param name="padding">Number of bytes to pad</param>
         public void Pad(int padding)
         {
-            while ((_position % padding) != 0 && _position < _buffer.Length)
+            while ((this._position % padding) != 0 && this._position < this._buffer.Length)
             {
-                _buffer[_position++] = 0;
+                this._buffer[this._position++] = 0;
             }
         }
     }

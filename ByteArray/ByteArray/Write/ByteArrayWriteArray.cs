@@ -187,8 +187,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Write(sbyte[] array, int index, int length)
         {
-            this.Write(array, index, length, _position);
-            _position += (length * 1);
+            this.Write(array, index, length, this._position);
+            this._position += (length * 1);
         }
         /// <summary>
         /// Writes data from array, advancing the internal position
@@ -198,8 +198,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Write(byte[] array, int index, int length)
         {
-            this.Write(array, index, length, _position);
-            _position += (length * 1);
+            this.Write(array, index, length, this._position);
+            this._position += (length * 1);
         }
         /// <summary>
         /// Writes data from array, advancing the internal position
@@ -209,8 +209,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Write(short[] array, int index, int length)
         {
-            this.Write(array, index, length, _position);
-            _position += (length * 2);
+            this.Write(array, index, length, this._position);
+            this._position += (length * 2);
         }
         /// <summary>
         /// Writes data from array, advancing the internal position
@@ -220,8 +220,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Write(ushort[] array, int index, int length)
         {
-            this.Write(array, index, length, _position);
-            _position += (length * 2);
+            this.Write(array, index, length, this._position);
+            this._position += (length * 2);
         }
         /// <summary>
         /// Writes data from array, advancing the internal position
@@ -231,8 +231,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Write(int[] array, int index, int length)
         {
-            this.Write(array, index, length, _position);
-            _position += (length * 4);
+            this.Write(array, index, length, this._position);
+            this._position += (length * 4);
         }
         /// <summary>
         /// Writes data from array, advancing the internal position
@@ -242,8 +242,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Write(uint[] array, int index, int length)
         {
-            this.Write(array, index, length, _position);
-            _position += (length * 4);
+            this.Write(array, index, length, this._position);
+            this._position += (length * 4);
         }
         /// <summary>
         /// Writes data from array, advancing the internal position
@@ -253,8 +253,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Write(long[] array, int index, int length)
         {
-            this.Write(array, index, length, _position);
-            _position += (length * 8);
+            this.Write(array, index, length, this._position);
+            this._position += (length * 8);
         }
         /// <summary>
         /// Writes data from array, advancing the internal position
@@ -264,8 +264,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Write(ulong[] array, int index, int length)
         {
-            this.Write(array, index, length, _position);
-            _position += (length * 8);
+            this.Write(array, index, length, this._position);
+            this._position += (length * 8);
         }
         /// <summary>
         /// Writes data from array, advancing the internal position
@@ -275,8 +275,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Write(float[] array, int index, int length)
         {
-            this.Write(array, index, length, _position);
-            _position += (length * 4);
+            this.Write(array, index, length, this._position);
+            this._position += (length * 4);
         }
         /// <summary>
         /// Writes data from array, advancing the internal position
@@ -286,8 +286,8 @@ namespace Libraries.ByteArray
         /// <param name="length">Amount of array values to read</param>
         public void Write(double[] array, int index, int length)
         {
-            this.Write(array, index, length, _position);
-            _position += (length * 8);
+            this.Write(array, index, length, this._position);
+            this._position += (length * 8);
         }
     }
 }

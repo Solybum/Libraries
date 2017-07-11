@@ -11,7 +11,7 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public bool ReadBool(int position)
         {
-            bool result = (_buffer[position] != 0);
+            bool result = (this._buffer[position] != 0);
             return result;
         }
         /// <summary>
@@ -21,7 +21,7 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public sbyte ReadI8(int position)
         {
-            sbyte result = (sbyte)_buffer[position];
+            sbyte result = (sbyte)this._buffer[position];
             return result;
         }
         /// <summary>
@@ -31,7 +31,7 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public byte ReadU8(int position)
         {
-            byte result = _buffer[position];
+            byte result = this._buffer[position];
             return result;
         }
         /// <summary>
@@ -42,13 +42,13 @@ namespace Libraries.ByteArray
         public short ReadI16(int position)
         {
             short result;
-            if (_endianess == Endianess.BigEndian)
+            if (this._endianess == Endianess.BigEndian)
             {
-                result = (short)(_buffer[position + 1] | _buffer[position + 0] << 8);
+                result = (short)(this._buffer[position + 1] | this._buffer[position + 0] << 8);
             }
             else
             {
-                result = (short)(_buffer[position + 0] | _buffer[position + 1] << 8);
+                result = (short)(this._buffer[position + 0] | this._buffer[position + 1] << 8);
             }
             return result;
         }
@@ -60,13 +60,13 @@ namespace Libraries.ByteArray
         public ushort ReadU16(int position)
         {
             ushort result;
-            if (_endianess == Endianess.BigEndian)
+            if (this._endianess == Endianess.BigEndian)
             {
-                result = (ushort)(_buffer[position + 1] | _buffer[position + 0] << 8);
+                result = (ushort)(this._buffer[position + 1] | this._buffer[position + 0] << 8);
             }
             else
             {
-                result = (ushort)(_buffer[position + 0] | _buffer[position + 1] << 8);
+                result = (ushort)(this._buffer[position + 0] | this._buffer[position + 1] << 8);
             }
             return result;
         }
@@ -78,13 +78,13 @@ namespace Libraries.ByteArray
         public int ReadI32(int position)
         {
             int result;
-            if (_endianess == Endianess.BigEndian)
+            if (this._endianess == Endianess.BigEndian)
             {
-                result = (_buffer[position + 3] | _buffer[position + 2] << 8 | _buffer[position + 1] << 16 | _buffer[position + 0] << 24);
+                result = (this._buffer[position + 3] | this._buffer[position + 2] << 8 | this._buffer[position + 1] << 16 | this._buffer[position + 0] << 24);
             }
             else
             {
-                result = (_buffer[position + 0] | _buffer[position + 1] << 8 | _buffer[position + 2] << 16 | _buffer[position + 3] << 24);
+                result = (this._buffer[position + 0] | this._buffer[position + 1] << 8 | this._buffer[position + 2] << 16 | this._buffer[position + 3] << 24);
             }
             return result;
         }
@@ -96,13 +96,13 @@ namespace Libraries.ByteArray
         public uint ReadU32(int position)
         {
             uint result;
-            if (_endianess == Endianess.BigEndian)
+            if (this._endianess == Endianess.BigEndian)
             {
-                result = (uint)(_buffer[position + 3] | _buffer[position + 2] << 8 | _buffer[position + 1] << 16 | _buffer[position + 0] << 24);
+                result = (uint)(this._buffer[position + 3] | this._buffer[position + 2] << 8 | this._buffer[position + 1] << 16 | this._buffer[position + 0] << 24);
             }
             else
             {
-                result = (uint)(_buffer[position + 0] | _buffer[position + 1] << 8 | _buffer[position + 2] << 16 | _buffer[position + 3] << 24);
+                result = (uint)(this._buffer[position + 0] | this._buffer[position + 1] << 8 | this._buffer[position + 2] << 16 | this._buffer[position + 3] << 24);
             }
             return result;
         }
@@ -115,15 +115,15 @@ namespace Libraries.ByteArray
         {
             uint lo;
             uint hi;
-            if (_endianess == Endianess.BigEndian)
+            if (this._endianess == Endianess.BigEndian)
             {
-                lo = (uint)(_buffer[position + 7] | _buffer[position + 6] << 8 | _buffer[position + 5] << 16 | _buffer[position + 4] << 24);
-                hi = (uint)(_buffer[position + 3] | _buffer[position + 2] << 8 | _buffer[position + 1] << 16 | _buffer[position + 0] << 24);
+                lo = (uint)(this._buffer[position + 7] | this._buffer[position + 6] << 8 | this._buffer[position + 5] << 16 | this._buffer[position + 4] << 24);
+                hi = (uint)(this._buffer[position + 3] | this._buffer[position + 2] << 8 | this._buffer[position + 1] << 16 | this._buffer[position + 0] << 24);
             }
             else
             {
-                lo = (uint)(_buffer[position + 0] | _buffer[position + 1] << 8 | _buffer[position + 2] << 16 | _buffer[position + 3] << 24);
-                hi = (uint)(_buffer[position + 4] | _buffer[position + 5] << 8 | _buffer[position + 6] << 16 | _buffer[position + 7] << 24);
+                lo = (uint)(this._buffer[position + 0] | this._buffer[position + 1] << 8 | this._buffer[position + 2] << 16 | this._buffer[position + 3] << 24);
+                hi = (uint)(this._buffer[position + 4] | this._buffer[position + 5] << 8 | this._buffer[position + 6] << 16 | this._buffer[position + 7] << 24);
             }
             long result = (long)((ulong)hi) << 32 | lo;
             return result;
@@ -137,15 +137,15 @@ namespace Libraries.ByteArray
         {
             uint lo;
             uint hi;
-            if (_endianess == Endianess.BigEndian)
+            if (this._endianess == Endianess.BigEndian)
             {
-                lo = (uint)(_buffer[position + 7] | _buffer[position + 6] << 8 | _buffer[position + 5] << 16 | _buffer[position + 4] << 24);
-                hi = (uint)(_buffer[position + 3] | _buffer[position + 2] << 8 | _buffer[position + 1] << 16 | _buffer[position + 0] << 24);
+                lo = (uint)(this._buffer[position + 7] | this._buffer[position + 6] << 8 | this._buffer[position + 5] << 16 | this._buffer[position + 4] << 24);
+                hi = (uint)(this._buffer[position + 3] | this._buffer[position + 2] << 8 | this._buffer[position + 1] << 16 | this._buffer[position + 0] << 24);
             }
             else
             {
-                lo = (uint)(_buffer[position + 0] | _buffer[position + 1] << 8 | _buffer[position + 2] << 16 | _buffer[position + 3] << 24);
-                hi = (uint)(_buffer[position + 4] | _buffer[position + 5] << 8 | _buffer[position + 6] << 16 | _buffer[position + 7] << 24);
+                lo = (uint)(this._buffer[position + 0] | this._buffer[position + 1] << 8 | this._buffer[position + 2] << 16 | this._buffer[position + 3] << 24);
+                hi = (uint)(this._buffer[position + 4] | this._buffer[position + 5] << 8 | this._buffer[position + 6] << 16 | this._buffer[position + 7] << 24);
             }
             ulong result = ((ulong)hi) << 32 | lo;
             return result;
@@ -158,17 +158,17 @@ namespace Libraries.ByteArray
         public float ReadF32(int position)
         {
             float result;
-            if (_endianess == Endianess.BigEndian)
+            if (this._endianess == Endianess.BigEndian)
             {
-                _temp[0] = _buffer[position + 3];
-                _temp[1] = _buffer[position + 2];
-                _temp[2] = _buffer[position + 1];
-                _temp[3] = _buffer[position + 0];
-                result = BitConverter.ToSingle(_temp, 0);
+                this._temp[0] = this._buffer[position + 3];
+                this._temp[1] = this._buffer[position + 2];
+                this._temp[2] = this._buffer[position + 1];
+                this._temp[3] = this._buffer[position + 0];
+                result = BitConverter.ToSingle(this._temp, 0);
             }
             else
             {
-                result = BitConverter.ToSingle(_buffer, position);
+                result = BitConverter.ToSingle(this._buffer, position);
             }
             return result;
         }
@@ -180,21 +180,21 @@ namespace Libraries.ByteArray
         public double ReadF64(int position)
         {
             double result;
-            if (_endianess == Endianess.BigEndian)
+            if (this._endianess == Endianess.BigEndian)
             {
-                _temp[0] = _buffer[position + 7];
-                _temp[1] = _buffer[position + 6];
-                _temp[2] = _buffer[position + 5];
-                _temp[3] = _buffer[position + 4];
-                _temp[4] = _buffer[position + 3];
-                _temp[5] = _buffer[position + 2];
-                _temp[6] = _buffer[position + 1];
-                _temp[7] = _buffer[position + 0];
-                result = BitConverter.ToDouble(_temp, 0);
+                this._temp[0] = this._buffer[position + 7];
+                this._temp[1] = this._buffer[position + 6];
+                this._temp[2] = this._buffer[position + 5];
+                this._temp[3] = this._buffer[position + 4];
+                this._temp[4] = this._buffer[position + 3];
+                this._temp[5] = this._buffer[position + 2];
+                this._temp[6] = this._buffer[position + 1];
+                this._temp[7] = this._buffer[position + 0];
+                result = BitConverter.ToDouble(this._temp, 0);
             }
             else
             {
-                result = BitConverter.ToDouble(_buffer, position);
+                result = BitConverter.ToDouble(this._buffer, position);
             }
             return result;
         }
@@ -205,8 +205,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public bool ReadBool()
         {
-            bool result = this.ReadBool(_position);
-            _position += 1;
+            bool result = this.ReadBool(this._position);
+            this._position += 1;
             return result;
         }
         /// <summary>
@@ -215,8 +215,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public sbyte ReadI8()
         {
-            sbyte result = this.ReadI8(_position);
-            _position += 1;
+            sbyte result = this.ReadI8(this._position);
+            this._position += 1;
             return result;
         }
         /// <summary>
@@ -225,8 +225,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public byte ReadU8()
         {
-            byte result = this.ReadU8(_position);
-            _position += 1;
+            byte result = this.ReadU8(this._position);
+            this._position += 1;
             return result;
         }
         /// <summary>
@@ -235,8 +235,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public short ReadI16()
         {
-            short result = this.ReadI16(_position);
-            _position += 2;
+            short result = this.ReadI16(this._position);
+            this._position += 2;
             return result;
         }
         /// <summary>
@@ -245,8 +245,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public ushort ReadU16()
         {
-            ushort result = this.ReadU16(_position);
-            _position += 2;
+            ushort result = this.ReadU16(this._position);
+            this._position += 2;
             return result;
         }
         /// <summary>
@@ -255,8 +255,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public int ReadI32()
         {
-            int result = this.ReadI32(_position);
-            _position += 4;
+            int result = this.ReadI32(this._position);
+            this._position += 4;
             return result;
         }
         /// <summary>
@@ -265,8 +265,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public uint ReadU32()
         {
-            uint result = this.ReadU32(_position);
-            _position += 4;
+            uint result = this.ReadU32(this._position);
+            this._position += 4;
             return result;
         }
         /// <summary>
@@ -275,8 +275,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public long ReadI64()
         {
-            long result = this.ReadI64(_position);
-            _position += 8;
+            long result = this.ReadI64(this._position);
+            this._position += 8;
             return result;
         }
         /// <summary>
@@ -285,8 +285,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public ulong ReadU64()
         {
-            ulong result = this.ReadU64(_position);
-            _position += 8;
+            ulong result = this.ReadU64(this._position);
+            this._position += 8;
             return result;
         }
         /// <summary>
@@ -295,8 +295,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public float ReadF32()
         {
-            float result = this.ReadF32(_position);
-            _position += 4;
+            float result = this.ReadF32(this._position);
+            this._position += 4;
             return result;
         }
         /// <summary>
@@ -305,8 +305,8 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public double ReadF64()
         {
-            double result = this.ReadF64(_position);
-            _position += 8;
+            double result = this.ReadF64(this._position);
+            this._position += 8;
             return result;
         }
     }
