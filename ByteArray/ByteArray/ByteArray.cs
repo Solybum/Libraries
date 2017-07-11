@@ -68,14 +68,8 @@ namespace Libraries.ByteArray
         /// Little endian by default
         /// </summary>
         /// <param name="size">Size for the internal buffer</param>
-        public ByteArray(int size)
+        public ByteArray(int size) : this(size, Endianess.LittleEndian)
         {
-            if (size < 0)
-            {
-                throw new ArgumentOutOfRangeException(nameof(size));
-            }
-            this._buffer = new byte[size];
-            this._endianess = Endianess.LittleEndian;
         }
         /// <summary>
         /// Constructor with endianess.
@@ -95,9 +89,8 @@ namespace Libraries.ByteArray
         /// Alternative constructor to act as a wrapper for a byte array
         /// </summary>
         /// <param name="byteArray">Array reference to use as backing array</param>
-        public ByteArray(byte[] byteArray)
+        public ByteArray(byte[] byteArray) : this(byteArray, Endianess.LittleEndian)
         {
-            this._buffer = byteArray ?? throw new ArgumentNullException(nameof(byteArray));
         }
         /// <summary>
         /// Alternative constructor to act as a wrapper for a byte array, with endianess
@@ -201,7 +194,9 @@ namespace Libraries.ByteArray
         }
 
         /// <summary>
-        /// Advances the internal position until the pad boundary is met, zeroing the padded bytes in the process
+        /// Advances the internal position until the pad boundary 
+        /// is met or the end of the buffer is reached, zeroing 
+        /// the padded bytes in the process
         /// </summary>
         /// <param name="padding">Number of bytes to pad</param>
         public void Pad(int padding)
