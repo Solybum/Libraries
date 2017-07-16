@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
+using MVVM.Messaging;
 
 namespace MVVM
 {
@@ -14,6 +15,15 @@ namespace MVVM
     /// </summary>
     public abstract class BindableBase : INotifyPropertyChanged, IDataErrorInfo
     {
+        #region Messaging
+        private static IMessageBus messageBus = new MessageBus();
+
+        /// <summary>
+        /// Message bus
+        /// </summary>
+        public static IMessageBus MessageBus { get { return messageBus; } }
+        #endregion
+
         #region Fields
 
         private readonly Dictionary<string, object> _values = new Dictionary<string, object>();
@@ -47,7 +57,7 @@ namespace MVVM
             {
                 throw new ArgumentException("Invalid property name", propertyName);
             }
-            _values[propertyName] = value;
+            this._values[propertyName] = value;
             NotifyPropertyChanged(propertyName);
         }
 
@@ -78,10 +88,10 @@ namespace MVVM
             }
 
             object value;
-            if (!_values.TryGetValue(propertyName, out value))
+            if (!this._values.TryGetValue(propertyName, out value))
             {
                 value = default(T);
-                _values.Add(propertyName, value);
+                this._values.Add(propertyName, value);
             }
 
             return (T)value;
@@ -192,7 +202,7 @@ namespace MVVM
         private object GetValue(string propertyName)
         {
             object value;
-            if (!_values.TryGetValue(propertyName, out value))
+            if (!this._values.TryGetValue(propertyName, out value))
             {
                 var propertyDescriptor = TypeDescriptor.GetProperties(GetType()).Find(propertyName, false);
                 if (propertyDescriptor == null)
@@ -201,7 +211,7 @@ namespace MVVM
                 }
 
                 value = propertyDescriptor.GetValue(this);
-                _values.Add(propertyName, value);
+                this._values.Add(propertyName, value);
             }
 
             return value;
@@ -227,9 +237,13 @@ namespace MVVM
                 string msg = "Invalid property name: " + propertyName;
 
                 if (this.ThrowOnInvalidPropertyName)
+                {
                     throw new Exception(msg);
+                }
                 else
+                {
                     Debug.Fail(msg);
+                }
             }
         }
 

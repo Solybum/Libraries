@@ -39,6 +39,9 @@
   <ItemGroup>
     <Compile Include="BindableBase.cs" />
     <Compile Include="Command.cs" />
+    <Compile Include="Messaging\ActionReference.cs" />
+    <Compile Include="Messaging\IMessageBus.cs" />
+    <Compile Include="Messaging\MessageBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

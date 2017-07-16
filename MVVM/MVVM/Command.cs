@@ -31,8 +31,8 @@ namespace MVVM
         /// <param name="canExecute"></param>
         public Command(Action<object> execute, Predicate<object> canExecute)
         {
-            _execute = execute;
-            _canExecute = canExecute;
+            this._execute = execute;
+            this._canExecute = canExecute;
         }
 
         /// <summary>
@@ -42,12 +42,12 @@ namespace MVVM
         /// <returns></returns>
         public bool CanExecute(object parameter)
         {
-            if (_canExecute == null)
+            if (this._canExecute == null)
             {
                 return true;
             }
 
-            return _canExecute(parameter);
+            return this._canExecute(parameter);
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace MVVM
         /// <param name="parameter"></param>
         public void Execute(object parameter)
         {
-            _execute(parameter);
+            this._execute(parameter);
         }
 
         /// <summary>
