@@ -6,6 +6,9 @@ The license in the root of this repository applies to all works made by me, othe
 [ByteArray](https://github.com/Solybum/Libraries/tree/master/ByteArray)  
 A wrapper to ease data type conversions to and from byte arrays.  
 
+[MVVM](https://github.com/Solybum/Libraries/tree/master/MVVM)  
+A basic MVVM library with property changed, Commands and a message bus.  
+Message bus taken from [MVVMFabric](https://github.com/brentedwards/MvvmFabric/tree/master/MvvmFabric/Messaging)  
 ---
 
 [MySQL Connector/Net](https://dev.mysql.com/downloads/connector/net/)  
