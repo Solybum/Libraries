@@ -37,7 +37,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BindableBase.cs" />
+    <Compile Include="ViewModelBase.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="Messaging\ActionReference.cs" />
     <Compile Include="Messaging\IMessageBus.cs" />

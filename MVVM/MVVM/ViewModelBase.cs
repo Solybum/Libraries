@@ -13,7 +13,7 @@ namespace MVVM
     /// <summary>
     /// 
     /// </summary>
-    public abstract class BindableBase : INotifyPropertyChanged, IDataErrorInfo
+    public abstract class ViewModelBase : INotifyPropertyChanged, IDataErrorInfo
     {
         #region Messaging
         private static IMessageBus messageBus = new MessageBus();
@@ -22,6 +22,13 @@ namespace MVVM
         /// Message bus
         /// </summary>
         public static IMessageBus MessageBus { get { return messageBus; } }
+        #endregion
+
+        #region Close view
+        /// <summary>
+        /// Event handler to close views from view models
+        /// </summary>
+        public EventHandler RequestClose;
         #endregion
 
         #region Fields
