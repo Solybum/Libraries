@@ -15,7 +15,7 @@
             length += index;
             while (index < length)
             {
-                Write(array[index], position);
+                Write(array[index], position, endianess);
                 position += 1;
                 index++;
             }
@@ -33,7 +33,7 @@
             length += index;
             while (index < length)
             {
-                Write(array[index], position);
+                Write(array[index], position, endianess);
                 position += 1;
                 index++;
             }
@@ -51,7 +51,7 @@
             length += index;
             while (index < length)
             {
-                Write(array[index], position);
+                Write(array[index], position, endianess);
                 position += 2;
                 index++;
             }
@@ -69,7 +69,7 @@
             length += index;
             while (index < length)
             {
-                Write(array[index], position);
+                Write(array[index], position, endianess);
                 position += 2;
                 index++;
             }
@@ -87,7 +87,7 @@
             length += index;
             while (index < length)
             {
-                Write(array[index], position);
+                Write(array[index], position, endianess);
                 position += 4;
                 index++;
             }
@@ -105,7 +105,7 @@
             length += index;
             while (index < length)
             {
-                Write(array[index], position);
+                Write(array[index], position, endianess);
                 position += 4;
                 index++;
             }
@@ -123,7 +123,7 @@
             length += index;
             while (index < length)
             {
-                Write(array[index], position);
+                Write(array[index], position, endianess);
                 position += 8;
                 index++;
             }
@@ -141,7 +141,7 @@
             length += index;
             while (index < length)
             {
-                Write(array[index], position);
+                Write(array[index], position, endianess);
                 position += 8;
                 index++;
             }
@@ -159,7 +159,7 @@
             length += index;
             while (index < length)
             {
-                Write(array[index], position);
+                Write(array[index], position, endianess);
                 position += 4;
                 index++;
             }
@@ -177,7 +177,7 @@
             length += index;
             while (index < length)
             {
-                Write(array[index], position);
+                Write(array[index], position, endianess);
                 position += 8;
                 index++;
             }
