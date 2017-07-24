@@ -3,13 +3,14 @@
     public partial class ByteArray
     {
         /// <summary>
-        /// Writes data from array, without advancing the internal position
+        /// Write data from the array without advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">ByteArray index to write to</param>
-        public void Write(sbyte[] array, int index, int length, int position)
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(sbyte[] array, int index, int length, int position, Endianess endianess)
         {
             length += index;
             while (index < length)
@@ -20,13 +21,14 @@
             }
         }
         /// <summary>
-        /// Writes data from array, without advancing the internal position
+        /// Write data from the array without advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">ByteArray index to write to</param>
-        public void Write(byte[] array, int index, int length, int position)
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(byte[] array, int index, int length, int position, Endianess endianess)
         {
             length += index;
             while (index < length)
@@ -37,13 +39,14 @@
             }
         }
         /// <summary>
-        /// Writes data from array, without advancing the internal position
+        /// Write data from the array without advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">ByteArray index to write to</param>
-        public void Write(short[] array, int index, int length, int position)
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(short[] array, int index, int length, int position, Endianess endianess)
         {
             length += index;
             while (index < length)
@@ -54,13 +57,14 @@
             }
         }
         /// <summary>
-        /// Writes data from array, without advancing the internal position
+        /// Write data from the array without advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">ByteArray index to write to</param>
-        public void Write(ushort[] array, int index, int length, int position)
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(ushort[] array, int index, int length, int position, Endianess endianess)
         {
             length += index;
             while (index < length)
@@ -71,13 +75,14 @@
             }
         }
         /// <summary>
-        /// Writes data from array, without advancing the internal position
+        /// Write data from the array without advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">ByteArray index to write to</param>
-        public void Write(int[] array, int index, int length, int position)
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(int[] array, int index, int length, int position, Endianess endianess)
         {
             length += index;
             while (index < length)
@@ -88,13 +93,14 @@
             }
         }
         /// <summary>
-        /// Writes data from array, without advancing the internal position
+        /// Write data from the array without advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">ByteArray index to write to</param>
-        public void Write(uint[] array, int index, int length, int position)
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(uint[] array, int index, int length, int position, Endianess endianess)
         {
             length += index;
             while (index < length)
@@ -105,13 +111,14 @@
             }
         }
         /// <summary>
-        /// Writes data from array, without advancing the internal position
+        /// Write data from the array without advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">ByteArray index to write to</param>
-        public void Write(long[] array, int index, int length, int position)
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(long[] array, int index, int length, int position, Endianess endianess)
         {
             length += index;
             while (index < length)
@@ -122,13 +129,14 @@
             }
         }
         /// <summary>
-        /// Writes data from array, without advancing the internal position
+        /// Write data from the array without advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">ByteArray index to write to</param>
-        public void Write(ulong[] array, int index, int length, int position)
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(ulong[] array, int index, int length, int position, Endianess endianess)
         {
             length += index;
             while (index < length)
@@ -139,13 +147,14 @@
             }
         }
         /// <summary>
-        /// Writes data from array, without advancing the internal position
+        /// Write data from the array without advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">ByteArray index to write to</param>
-        public void Write(float[] array, int index, int length, int position)
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(float[] array, int index, int length, int position, Endianess endianess)
         {
             length += index;
             while (index < length)
@@ -156,13 +165,14 @@
             }
         }
         /// <summary>
-        /// Writes data from array, without advancing the internal position
+        /// Write data from the array without advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
-        /// <param name="position">ByteArray index to write to</param>
-        public void Write(double[] array, int index, int length, int position)
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(double[] array, int index, int length, int position, Endianess endianess)
         {
             length += index;
             while (index < length)
@@ -174,114 +184,346 @@
         }
 
         /// <summary>
-        /// Writes data from array, advancing the internal position
+        /// Write data from the array without advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        public void Write(sbyte[] array, int index, int length, int position)
+        {
+            this.Write(array, index, length, position, this.endianess);
+        }
+        /// <summary>
+        /// Write data from the array without advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        public void Write(byte[] array, int index, int length, int position)
+        {
+            this.Write(array, index, length, position, this.endianess);
+        }
+        /// <summary>
+        /// Write data from the array without advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        public void Write(short[] array, int index, int length, int position)
+        {
+            this.Write(array, index, length, position, this.endianess);
+        }
+        /// <summary>
+        /// Write data from the array without advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        public void Write(ushort[] array, int index, int length, int position)
+        {
+            this.Write(array, index, length, position, this.endianess);
+        }
+        /// <summary>
+        /// Write data from the array without advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        public void Write(int[] array, int index, int length, int position)
+        {
+            this.Write(array, index, length, position, this.endianess);
+        }
+        /// <summary>
+        /// Write data from the array without advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        public void Write(uint[] array, int index, int length, int position)
+        {
+            this.Write(array, index, length, position, this.endianess);
+        }
+        /// <summary>
+        /// Write data from the array without advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        public void Write(long[] array, int index, int length, int position)
+        {
+            this.Write(array, index, length, position, this.endianess);
+        }
+        /// <summary>
+        /// Write data from the array without advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        public void Write(ulong[] array, int index, int length, int position)
+        {
+            this.Write(array, index, length, position, this.endianess);
+        }
+        /// <summary>
+        /// Write data from the array without advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        public void Write(float[] array, int index, int length, int position)
+        {
+            this.Write(array, index, length, position, this.endianess);
+        }
+        /// <summary>
+        /// Write data from the array without advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="position">Position to write to</param>
+        public void Write(double[] array, int index, int length, int position)
+        {
+            this.Write(array, index, length, position, this.endianess);
+        }
+
+        /// <summary>
+        /// Write data from the array advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(sbyte[] array, int index, int length, Endianess endianess)
+        {
+            this.Write(array, index, length, this.position, endianess);
+            this.position += (length * 1);
+        }
+        /// <summary>
+        /// Write data from the array advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(byte[] array, int index, int length, Endianess endianess)
+        {
+            this.Write(array, index, length, this.position, endianess);
+            this.position += (length * 1);
+        }
+        /// <summary>
+        /// Write data from the array advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(short[] array, int index, int length, Endianess endianess)
+        {
+            this.Write(array, index, length, this.position, endianess);
+            this.position += (length * 2);
+        }
+        /// <summary>
+        /// Write data from the array advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(ushort[] array, int index, int length, Endianess endianess)
+        {
+            this.Write(array, index, length, this.position, endianess);
+            this.position += (length * 2);
+        }
+        /// <summary>
+        /// Write data from the array advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(int[] array, int index, int length, Endianess endianess)
+        {
+            this.Write(array, index, length, this.position, endianess);
+            this.position += (length * 4);
+        }
+        /// <summary>
+        /// Write data from the array advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(uint[] array, int index, int length, Endianess endianess)
+        {
+            this.Write(array, index, length, this.position, endianess);
+            this.position += (length * 4);
+        }
+        /// <summary>
+        /// Write data from the array advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(long[] array, int index, int length, Endianess endianess)
+        {
+            this.Write(array, index, length, this.position, endianess);
+            this.position += (length * 8);
+        }
+        /// <summary>
+        /// Write data from the array advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(ulong[] array, int index, int length, Endianess endianess)
+        {
+            this.Write(array, index, length, this.position, endianess);
+            this.position += (length * 8);
+        }
+        /// <summary>
+        /// Write data from the array advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(float[] array, int index, int length, Endianess endianess)
+        {
+            this.Write(array, index, length, this.position, endianess);
+            this.position += (length * 4);
+        }
+        /// <summary>
+        /// Write data from the array advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
+        /// <param name="endianess">Endianess to write with</param>
+        public void Write(double[] array, int index, int length, Endianess endianess)
+        {
+            this.Write(array, index, length, this.position, endianess);
+            this.position += (length * 8);
+        }
+
+        /// <summary>
+        /// Write data from the array advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
         public void Write(sbyte[] array, int index, int length)
         {
-            this.Write(array, index, length, this._position);
-            this._position += (length * 1);
+            this.Write(array, index, length, this.position, this.endianess);
+            this.position += (length * 1);
         }
         /// <summary>
-        /// Writes data from array, advancing the internal position
+        /// Write data from the array advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
         public void Write(byte[] array, int index, int length)
         {
-            this.Write(array, index, length, this._position);
-            this._position += (length * 1);
+            this.Write(array, index, length, this.position, this.endianess);
+            this.position += (length * 1);
         }
         /// <summary>
-        /// Writes data from array, advancing the internal position
+        /// Write data from the array advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
         public void Write(short[] array, int index, int length)
         {
-            this.Write(array, index, length, this._position);
-            this._position += (length * 2);
+            this.Write(array, index, length, this.position, this.endianess);
+            this.position += (length * 2);
         }
         /// <summary>
-        /// Writes data from array, advancing the internal position
+        /// Write data from the array advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
         public void Write(ushort[] array, int index, int length)
         {
-            this.Write(array, index, length, this._position);
-            this._position += (length * 2);
+            this.Write(array, index, length, this.position, this.endianess);
+            this.position += (length * 2);
         }
         /// <summary>
-        /// Writes data from array, advancing the internal position
+        /// Write data from the array advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
         public void Write(int[] array, int index, int length)
         {
-            this.Write(array, index, length, this._position);
-            this._position += (length * 4);
+            this.Write(array, index, length, this.position, this.endianess);
+            this.position += (length * 4);
         }
         /// <summary>
-        /// Writes data from array, advancing the internal position
+        /// Write data from the array advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
         public void Write(uint[] array, int index, int length)
         {
-            this.Write(array, index, length, this._position);
-            this._position += (length * 4);
+            this.Write(array, index, length, this.position, this.endianess);
+            this.position += (length * 4);
         }
         /// <summary>
-        /// Writes data from array, advancing the internal position
+        /// Write data from the array advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
         public void Write(long[] array, int index, int length)
         {
-            this.Write(array, index, length, this._position);
-            this._position += (length * 8);
+            this.Write(array, index, length, this.position, this.endianess);
+            this.position += (length * 8);
         }
         /// <summary>
-        /// Writes data from array, advancing the internal position
+        /// Write data from the array advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
         public void Write(ulong[] array, int index, int length)
         {
-            this.Write(array, index, length, this._position);
-            this._position += (length * 8);
+            this.Write(array, index, length, this.position, this.endianess);
+            this.position += (length * 8);
         }
         /// <summary>
-        /// Writes data from array, advancing the internal position
+        /// Write data from the array advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
         public void Write(float[] array, int index, int length)
         {
-            this.Write(array, index, length, this._position);
-            this._position += (length * 4);
+            this.Write(array, index, length, this.position, this.endianess);
+            this.position += (length * 4);
         }
         /// <summary>
-        /// Writes data from array, advancing the internal position
+        /// Write data from the array advancing the internal position
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="index">Starting position in the array</param>
-        /// <param name="length">Amount of array values to read</param>
+        /// <param name="array">Array to write data from</param>
+        /// <param name="index">Array position to write from</param>
+        /// <param name="length">Amount of elements to write</param>
         public void Write(double[] array, int index, int length)
         {
-            this.Write(array, index, length, this._position);
-            this._position += (length * 8);
+            this.Write(array, index, length, this.position, this.endianess);
+            this.position += (length * 8);
         }
     }
 }

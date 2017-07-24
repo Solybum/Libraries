@@ -5,17 +5,17 @@ namespace Libraries.ByteArray
     public partial class ByteArray
     {
         /// <summary>
-        /// Writes a 1 byte <see cref="char"/> without advancing the internal position
+        /// Write an ASCII char without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
         /// <param name="position">ByteArray index to write to</param>
         /// <returns></returns>
         public void WriteCharA(char value, int position)
         {
-            this._buffer[position] = Convert.ToByte(value);
+            this.buffer[position] = Convert.ToByte(value);
         }
         /// <summary>
-        /// Writes a 2 byte <see cref="char"/> without advancing the internal position
+        /// Write an UNICODE char without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
         /// <param name="position">ByteArray index to write to</param>
@@ -23,29 +23,29 @@ namespace Libraries.ByteArray
         public void WriteCharW(char value, int position)
         {
             ushort tmp = Convert.ToUInt16(value);
-            this._buffer[position + 0] = (byte)tmp;
-            this._buffer[position + 1] = (byte)(tmp >> 8);
+            this.buffer[position + 0] = (byte)tmp;
+            this.buffer[position + 1] = (byte)(tmp >> 8);
         }
 
         /// <summary>
-        /// Writes a 1 byte <see cref="char"/> advancing the internal position
+        /// Write an ASCII char advancing the internal position
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
         public void WriteCharA(char value)
         {
-            this.WriteCharA(value, this._position);
-            this._position += 1;
+            this.WriteCharA(value, this.position);
+            this.position += 1;
         }
         /// <summary>
-        /// Writes a 2 byte <see cref="char"/> advancing the internal position
+        /// Write an UNICODE char advancing the internal position
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
         public void WriteCharW(char value)
         {
-            this.WriteCharW(value, this._position);
-            this._position += 2;
+            this.WriteCharW(value, this.position);
+            this.position += 2;
         }
 
         /// <summary>
@@ -120,11 +120,11 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public void WriteStringA(string text, int index, int length, bool nullTerminated)
         {
-            this.WriteStringA(text, index, length, nullTerminated, this._position);
-            this._position += length;
+            this.WriteStringA(text, index, length, nullTerminated, this.position);
+            this.position += length;
             if (nullTerminated)
             {
-                this._position += 1;
+                this.position += 1;
             }
         }
         /// <summary>
@@ -138,11 +138,11 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public void WriteStringW(string text, int index, int length, bool nullTerminated)
         {
-            this.WriteStringW(text, index, length, nullTerminated, this._position);
-            this._position += (length * 2);
+            this.WriteStringW(text, index, length, nullTerminated, this.position);
+            this.position += (length * 2);
             if (nullTerminated)
             {
-                this._position += 2;
+                this.position += 2;
             }
         }
     }
