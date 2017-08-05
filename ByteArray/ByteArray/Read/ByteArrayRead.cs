@@ -553,5 +553,58 @@ namespace Libraries.ByteArray
             this.position += 8;
             return result;
         }
+
+        /// <summary>
+        /// Read data to the array without advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to read data to</param>
+        /// <param name="index">Array position to read to</param>
+        /// <param name="length">Amount of elements to read</param>
+        /// <param name="position">Position to read from</param>
+        /// <param name="endianess">Endianess to read with</param>
+        public void Read(byte[] array, int index, int length, int position, Endianess endianess)
+        {
+            length += index;
+            while (index < length)
+            {
+                array[index] = ReadU8(position, endianess);
+                position += 1;
+                index++;
+            }
+        }
+        /// <summary>
+        /// Read data to the array without advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to read data to</param>
+        /// <param name="index">Array position to read to</param>
+        /// <param name="length">Amount of elements to read</param>
+        /// <param name="position">Position to read from</param>
+        public void Read(byte[] array, int index, int length, int position)
+        {
+            this.Read(array, index, length, position, this.endianess);
+        }
+        /// <summary>
+        /// Read data to the array advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to read data to</param>
+        /// <param name="index">Array position to read to</param>
+        /// <param name="length">Amount of elements to read</param>
+        /// <param name="endianess">Endianess to read with</param>
+        public void Read(byte[] array, int index, int length, Endianess endianess)
+        {
+            this.Read(array, index, length, this.position, endianess);
+            this.position += (length * 1);
+        }
+        /// <summary>
+        /// Read data to the array advancing the internal position
+        /// </summary>
+        /// <param name="array">Array to read data to</param>
+        /// <param name="index">Array position to read to</param>
+        /// <param name="length">Amount of elements to read</param>
+        public void Read(byte[] array, int index, int length)
+        {
+            this.Read(array, index, length, this.position, this.endianess);
+            this.position += (length * 1);
+        }
     }
 }
