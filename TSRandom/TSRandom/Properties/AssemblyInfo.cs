@@ -1,14 +1,15 @@
 ﻿using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Thread Safe Random")]
+[assembly: AssemblyTitle("TSRandom")]
 [assembly: AssemblyDescription("Thread safe random number generator")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Thread Safe Random")]
+[assembly: AssemblyProduct("TSRandom")]
 [assembly: AssemblyCopyright("Copyright © Soleil Rojas 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("7c4a877f-f683-4e70-a362-24b0efcc41bf")]
+[assembly: Guid("82f2ca28-6157-41ff-b644-2ef357ee4d6c")]
 
 // Version information for an assembly consists of the following four values:
 //

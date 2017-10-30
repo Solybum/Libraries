@@ -1,10 +1,9 @@
 ﻿using System;
 
-namespace Thread_Safe_Random
+namespace ThreadSafeRandom
 {
     /// <summary>
-    /// Code found online, right now I don't remember where I found it.
-    /// Will add reference once I find where I got it from.
+    /// https://github.com/OBeautifulCode/OBeautifulCode.Math/blob/master/OBeautifulCode.Math/ThreadSafeRandom.cs
     /// </summary>
     public static class TSRandom
     {
