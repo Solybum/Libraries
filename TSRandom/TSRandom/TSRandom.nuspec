@@ -7,7 +7,7 @@
     <authors>Soleil Rojas</authors>
     <owners>Soleil Rojas</owners>
     <licenseUrl>https://github.com/Solybum/Libraries/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/Solybum/Libraries/tree/master/Thread%20Safe%20Random</projectUrl>
+    <projectUrl>https://github.com/Solybum/Libraries/tree/master/TSRandom</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>First nuget release.</releaseNotes>
