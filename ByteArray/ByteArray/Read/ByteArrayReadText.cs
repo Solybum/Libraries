@@ -57,11 +57,12 @@ namespace Libraries.ByteArray
             string result = "";
             while (length == -1 || result.Length < length)
             {
-                if (this.buffer[position] == 0)
+                char c = ReadCharA(position);
+                if (c == '\0')
                 {
                     break;
                 }
-                result += ReadCharA(position);
+                result += c;
                 position += 1;
             }
             return result;
@@ -77,11 +78,12 @@ namespace Libraries.ByteArray
             string result = "";
             while (length == -1 || result.Length < length)
             {
-                if (this.buffer[position] == 0)
+                char c = ReadCharW(position);
+                if (c == '\0')
                 {
                     break;
                 }
-                result += ReadCharW(position);
+                result += c;
                 position += 2;
             }
             return result;
