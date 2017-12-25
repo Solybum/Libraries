@@ -1,10 +1,8 @@
-﻿namespace Libraries.ByteArray
-{
+﻿namespace Libraries.ByteArray {
     /// <summary>
     /// 
     /// </summary>
-    public enum Endianess
-    {
+    public enum Endianess {
         /// <summary>
         /// 
         /// </summary>
