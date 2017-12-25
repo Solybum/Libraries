@@ -12,7 +12,14 @@ namespace Libraries.ByteArray
         /// <returns></returns>
         public void WriteCharA(char value, int position)
         {
-            this.buffer[position] = Convert.ToByte(value);
+            if (value > 255)
+            {
+                this.buffer[position] = 63;
+            }
+            else
+            {
+                this.buffer[position] = Convert.ToByte(value);
+            }
         }
         /// <summary>
         /// Write an UNICODE char without advancing the internal position
