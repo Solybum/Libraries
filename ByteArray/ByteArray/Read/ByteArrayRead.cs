@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Libraries.ByteArray {
+namespace Soly.ByteArray {
     public partial class ByteArray {
         /// <summary>
         /// Read data without advancing the internal position

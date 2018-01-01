@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Libraries.ThreadSafeRandom
+namespace Soly.ThreadSafeRandom
 {
     /// <summary>
     /// https://github.com/OBeautifulCode/OBeautifulCode.Math/blob/master/OBeautifulCode.Math/ThreadSafeRandom.cs

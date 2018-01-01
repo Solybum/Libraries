@@ -7,7 +7,7 @@
     <ProjectGuid>{82F2CA28-6157-41FF-B644-2EF357EE4D6C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Libraries.TSRandom</RootNamespace>
+    <RootNamespace>Soly.TSRandom</RootNamespace>
     <AssemblyName>TSRandom</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -1,4 +1,4 @@
-﻿namespace Libraries.ByteArray {
+﻿namespace Soly.ByteArray {
     /// <summary>
     /// 
     /// </summary>
