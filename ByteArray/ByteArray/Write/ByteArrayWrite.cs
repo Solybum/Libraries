@@ -3,7 +3,7 @@
 namespace Soly.ByteArray {
     public partial class ByteArray {
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -12,7 +12,7 @@ namespace Soly.ByteArray {
             this.buffer[position] = (byte)(value ? 1 : 0);
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -21,7 +21,7 @@ namespace Soly.ByteArray {
             this.buffer[position] = (byte)value;
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -30,7 +30,7 @@ namespace Soly.ByteArray {
             this.buffer[position] = value;
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -45,7 +45,7 @@ namespace Soly.ByteArray {
             }
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -60,7 +60,7 @@ namespace Soly.ByteArray {
             }
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -79,7 +79,7 @@ namespace Soly.ByteArray {
             }
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -98,7 +98,7 @@ namespace Soly.ByteArray {
             }
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -125,7 +125,7 @@ namespace Soly.ByteArray {
             }
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -152,7 +152,7 @@ namespace Soly.ByteArray {
             }
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -169,7 +169,7 @@ namespace Soly.ByteArray {
             }
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -198,7 +198,7 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -206,7 +206,7 @@ namespace Soly.ByteArray {
             this.Write(value, position, this.endianess);
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -214,7 +214,7 @@ namespace Soly.ByteArray {
             this.Write(value, position, this.endianess);
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -222,7 +222,7 @@ namespace Soly.ByteArray {
             this.Write(value, position, this.endianess);
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -230,7 +230,7 @@ namespace Soly.ByteArray {
             this.Write(value, position, this.endianess);
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -238,7 +238,7 @@ namespace Soly.ByteArray {
             this.Write(value, position, this.endianess);
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -246,7 +246,7 @@ namespace Soly.ByteArray {
             this.Write(value, position, this.endianess);
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -254,7 +254,7 @@ namespace Soly.ByteArray {
             this.Write(value, position, this.endianess);
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -262,7 +262,7 @@ namespace Soly.ByteArray {
             this.Write(value, position, this.endianess);
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -270,7 +270,7 @@ namespace Soly.ByteArray {
             this.Write(value, position, this.endianess);
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -278,7 +278,7 @@ namespace Soly.ByteArray {
             this.Write(value, position, this.endianess);
         }
         /// <summary>
-        /// Write data without advancing the internal position
+        /// Write data to the ByteArray without advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="position">Position to write to</param>
@@ -287,7 +287,7 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="endianess">Endianess to write in</param>
@@ -296,7 +296,7 @@ namespace Soly.ByteArray {
             this.position += 1;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="endianess">Endianess to write in</param>
@@ -305,7 +305,7 @@ namespace Soly.ByteArray {
             this.position += 1;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="endianess">Endianess to write in</param>
@@ -314,7 +314,7 @@ namespace Soly.ByteArray {
             this.position += 1;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="endianess">Endianess to write in</param>
@@ -323,7 +323,7 @@ namespace Soly.ByteArray {
             this.position += 2;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="endianess">Endianess to write in</param>
@@ -332,7 +332,7 @@ namespace Soly.ByteArray {
             this.position += 2;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="endianess">Endianess to write in</param>
@@ -341,7 +341,7 @@ namespace Soly.ByteArray {
             this.position += 4;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="endianess">Endianess to write in</param>
@@ -350,7 +350,7 @@ namespace Soly.ByteArray {
             this.position += 4;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="endianess">Endianess to write in</param>
@@ -359,7 +359,7 @@ namespace Soly.ByteArray {
             this.position += 8;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="endianess">Endianess to write in</param>
@@ -368,7 +368,7 @@ namespace Soly.ByteArray {
             this.position += 8;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="endianess">Endianess to write in</param>
@@ -377,7 +377,7 @@ namespace Soly.ByteArray {
             this.position += 4;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         /// <param name="endianess">Endianess to write in</param>
@@ -387,7 +387,7 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         public void Write(bool value) {
@@ -395,7 +395,7 @@ namespace Soly.ByteArray {
             this.position += 1;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         public void Write(sbyte value) {
@@ -403,7 +403,7 @@ namespace Soly.ByteArray {
             this.position += 1;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         public void Write(byte value) {
@@ -411,7 +411,7 @@ namespace Soly.ByteArray {
             this.position += 1;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         public void Write(short value) {
@@ -419,7 +419,7 @@ namespace Soly.ByteArray {
             this.position += 2;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         public void Write(ushort value) {
@@ -427,7 +427,7 @@ namespace Soly.ByteArray {
             this.position += 2;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         public void Write(int value) {
@@ -435,7 +435,7 @@ namespace Soly.ByteArray {
             this.position += 4;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         public void Write(uint value) {
@@ -443,7 +443,7 @@ namespace Soly.ByteArray {
             this.position += 4;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         public void Write(long value) {
@@ -451,7 +451,7 @@ namespace Soly.ByteArray {
             this.position += 8;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         public void Write(ulong value) {
@@ -459,7 +459,7 @@ namespace Soly.ByteArray {
             this.position += 8;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         public void Write(float value) {
@@ -467,7 +467,7 @@ namespace Soly.ByteArray {
             this.position += 4;
         }
         /// <summary>
-        /// Write data advancing the internal position
+        /// Write data to the ByteArray advancing the internal position
         /// </summary>
         /// <param name="value">Value to write</param>
         public void Write(double value) {
@@ -476,50 +476,30 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Write data from the array without advancing the internal position
+        /// Write data to the ByteArray from the array without advancing the internal position
         /// </summary>
         /// <param name="array">Array to write data from</param>
         /// <param name="index">Array position to write from</param>
         /// <param name="length">Amount of elements to write</param>
         /// <param name="position">Position to write to</param>
         /// <param name="endianess">Endianess to write with</param>
-        public void Write(byte[] array, int index, int length, int position, Endianess endianess) {
+        public void Write(byte[] array, int index, int length, int position) {
             length += index;
             while (index < length) {
-                Write(array[index], position, endianess);
+                Write(array[index], position, this.endianess);
                 position += 1;
                 index++;
             }
         }
         /// <summary>
-        /// Write data from the array without advancing the internal position
-        /// </summary>
-        /// <param name="array">Array to write data from</param>
-        /// <param name="index">Array position to write from</param>
-        /// <param name="length">Amount of elements to write</param>
-        /// <param name="position">Position to write to</param>
-        public void Write(byte[] array, int index, int length, int position) {
-            this.Write(array, index, length, position, this.endianess);
-        }
-        /// <summary>
-        /// Write data from the array advancing the internal position
+        /// Write data to the ByteArray from the array advancing the internal position
         /// </summary>
         /// <param name="array">Array to write data from</param>
         /// <param name="index">Array position to write from</param>
         /// <param name="length">Amount of elements to write</param>
         /// <param name="endianess">Endianess to write with</param>
-        public void Write(byte[] array, int index, int length, Endianess endianess) {
-            this.Write(array, index, length, this.position, endianess);
-            this.position += (length * 1);
-        }
-        /// <summary>
-        /// Write data from the array advancing the internal position
-        /// </summary>
-        /// <param name="array">Array to write data from</param>
-        /// <param name="index">Array position to write from</param>
-        /// <param name="length">Amount of elements to write</param>
         public void Write(byte[] array, int index, int length) {
-            this.Write(array, index, length, this.position, this.endianess);
+            this.Write(array, index, length, this.position);
             this.position += (length * 1);
         }
     }

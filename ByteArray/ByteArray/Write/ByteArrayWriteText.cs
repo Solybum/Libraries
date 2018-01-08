@@ -3,7 +3,7 @@
 namespace Soly.ByteArray {
     public partial class ByteArray {
         /// <summary>
-        /// Write an ASCII char without advancing the internal position
+        /// Write to the ByteArray an ASCII char without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
         /// <param name="position">ByteArray index to write to</param>
@@ -16,7 +16,7 @@ namespace Soly.ByteArray {
             }
         }
         /// <summary>
-        /// Write an UNICODE char without advancing the internal position
+        /// Write to the ByteArray an UNICODE char without advancing the internal position
         /// </summary>
         /// <param name="value"></param>
         /// <param name="position">ByteArray index to write to</param>
@@ -28,7 +28,7 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Write an ASCII char advancing the internal position
+        /// Write to the ByteArray an ASCII char advancing the internal position
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -37,7 +37,7 @@ namespace Soly.ByteArray {
             this.position += 1;
         }
         /// <summary>
-        /// Write an UNICODE char advancing the internal position
+        /// Write to the ByteArray an UNICODE char advancing the internal position
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -47,7 +47,7 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Writes an ASCII string, without advancing the internal position.
+        /// Write to the ByteArray an ASCII string, without advancing the internal position.
         /// If the string lenght is less than the target length, the remaining bytes will be set to zero (null)
         /// </summary>
         /// <param name="text">String to write to the byte array</param>
@@ -73,7 +73,7 @@ namespace Soly.ByteArray {
             }
         }
         /// <summary>
-        /// Writes an UNICODE string, without advancing the internal position.
+        /// Write to the ByteArray an UNICODE string, without advancing the internal position.
         /// If the string lenght is less than the target length, the remaining bytes will be set to zero (null)
         /// </summary>
         /// <param name="text">String to write to the byte array</param>
@@ -100,7 +100,7 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Writes an ASCII string, advancing the internal position.
+        /// Write to the ByteArray an ASCII string, advancing the internal position.
         /// If the string lenght is less than the target length, the remaining bytes will be set to zero (null)
         /// </summary>
         /// <param name="text">String to write to the byte array</param>
@@ -116,7 +116,7 @@ namespace Soly.ByteArray {
             }
         }
         /// <summary>
-        /// Writes an UNICODE string, advancing the internal position.
+        /// Write to the ByteArray an UNICODE string, advancing the internal position.
         /// If the string lenght is less than the target length, the remaining bytes will be set to zero (null)
         /// </summary>
         /// <param name="text">String to write to the byte array</param>

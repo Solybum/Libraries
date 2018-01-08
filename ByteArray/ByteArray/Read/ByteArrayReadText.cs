@@ -3,7 +3,7 @@
 namespace Soly.ByteArray {
     public partial class ByteArray {
         /// <summary>
-        /// Read a ASCII char without advancing the internal position
+        /// Read from the ByteArray an ASCII char without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <returns></returns>
@@ -12,7 +12,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read a UNICODE char without advancing the internal position
+        /// Read from the ByteArray an UNICODE char without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <returns></returns>
@@ -22,7 +22,7 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Read a ASCII char without advancing the internal position
+        /// Read from the ByteArray an ASCII char without advancing the internal position
         /// </summary>
         /// <returns></returns>
         public char ReadCharA() {
@@ -31,7 +31,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read a UNICODE char without advancing the internal position
+        /// Read from the ByteArray an UNICODE char without advancing the internal position
         /// </summary>
         /// <returns></returns>
         public char ReadCharW() {
@@ -41,7 +41,7 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Read an ASCII string until the target length is reached or a null character is found, without advancing the internal position
+        /// Read from the ByteArray an ASCII string until the target length is reached or a null character is found, without advancing the internal position
         /// </summary>
         /// <param name="length">Characters to read, use -1 for unlimited length</param>
         /// <param name="position">Position to read from</param>
@@ -59,7 +59,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read an UNICODE string until the target length is reached or a null character is found, without advancing the internal position
+        /// Read from the ByteArray an UNICODE string until the target length is reached or a null character is found, without advancing the internal position
         /// </summary>
         /// <param name="length">Characters to read, use -1 for unlimited length</param>
         /// <param name="position">Position to read from</param>
@@ -78,9 +78,9 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Read an ASCII string until the target length is reached or a null character is found, advancing the internal position
+        /// Read from the ByteArray an ASCII string until the target length is reached or a null character is found, advancing the internal position
         /// </summary>
-        /// <param name="length">Characters to read, use -1 for unlimited length</param>
+        /// <param name="length">Characters to read, use -1 for unlimited length, -1 ignores null the character</param>
         /// <returns></returns>
         public string ReadStringA(int length) {
             string result = this.ReadStringA(length, this.position);
@@ -92,9 +92,9 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read an UNICODE string until the target length is reached or a null character is found, advancing the internal position
+        /// Read from the ByteArray an UNICODE string until the target length is reached or a null character is found, advancing the internal position
         /// </summary>
-        /// <param name="length">Characters to read, use -1 for unlimited length</param>
+        /// <param name="length">Characters to read, use -1 for unlimited length, -1 ignores null the character</param>
         /// <returns></returns>
         public string ReadStringW(int length) {
             string result = this.ReadStringW(length, this.position);

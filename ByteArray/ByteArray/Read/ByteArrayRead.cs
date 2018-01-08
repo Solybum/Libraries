@@ -3,7 +3,7 @@
 namespace Soly.ByteArray {
     public partial class ByteArray {
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <param name="endianess">Endianess to read with</param>
@@ -13,7 +13,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <param name="endianess">Endianess to read with</param>
@@ -23,7 +23,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <param name="endianess">Endianess to read with</param>
@@ -33,7 +33,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <param name="endianess">Endianess to read with</param>
@@ -48,7 +48,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <param name="endianess">Endianess to read with</param>
@@ -63,7 +63,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <param name="endianess">Endianess to read with</param>
@@ -78,7 +78,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <param name="endianess">Endianess to read with</param>
@@ -93,7 +93,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <param name="endianess">Endianess to read with</param>
@@ -112,7 +112,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <param name="endianess">Endianess to read with</param>
@@ -131,7 +131,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <param name="endianess">Endianess to read with</param>
@@ -150,7 +150,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <param name="endianess">Endianess to read with</param>
@@ -174,7 +174,7 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <returns></returns>
@@ -183,7 +183,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <returns></returns>
@@ -192,7 +192,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <returns></returns>
@@ -201,7 +201,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <returns></returns>
@@ -210,7 +210,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <returns></returns>
@@ -219,7 +219,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <returns></returns>
@@ -228,7 +228,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <returns></returns>
@@ -237,7 +237,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <returns></returns>
@@ -246,7 +246,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <returns></returns>
@@ -255,7 +255,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <returns></returns>
@@ -264,7 +264,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data without advancing the internal position
+        /// Read data from the ByteArray data without advancing the internal position
         /// </summary>
         /// <param name="position">Position to read from</param>
         /// <returns></returns>
@@ -274,7 +274,7 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <param name="endianess">Endianess to read with</param>
         /// <returns></returns>
@@ -284,7 +284,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <param name="endianess">Endianess to read with</param>
         /// <returns></returns>
@@ -294,7 +294,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <param name="endianess">Endianess to read with</param>
         /// <returns></returns>
@@ -304,7 +304,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <param name="endianess">Endianess to read with</param>
         /// <returns></returns>
@@ -314,7 +314,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <param name="endianess">Endianess to read with</param>
         /// <returns></returns>
@@ -324,7 +324,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <param name="endianess">Endianess to read with</param>
         /// <returns></returns>
@@ -334,7 +334,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <param name="endianess">Endianess to read with</param>
         /// <returns></returns>
@@ -344,7 +344,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <param name="endianess">Endianess to read with</param>
         /// <returns></returns>
@@ -354,7 +354,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <param name="endianess">Endianess to read with</param>
         /// <returns></returns>
@@ -364,7 +364,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <param name="endianess">Endianess to read with</param>
         /// <returns></returns>
@@ -374,7 +374,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <param name="endianess">Endianess to read with</param>
         /// <returns></returns>
@@ -385,7 +385,7 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <returns></returns>
         public bool ReadBool() {
@@ -394,7 +394,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <returns></returns>
         public sbyte ReadI8() {
@@ -403,7 +403,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <returns></returns>
         public byte ReadU8() {
@@ -412,7 +412,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <returns></returns>
         public short ReadI16() {
@@ -421,7 +421,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <returns></returns>
         public ushort ReadU16() {
@@ -430,7 +430,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <returns></returns>
         public int ReadI32() {
@@ -439,7 +439,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <returns></returns>
         public uint ReadU32() {
@@ -448,7 +448,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <returns></returns>
         public long ReadI64() {
@@ -457,7 +457,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <returns></returns>
         public ulong ReadU64() {
@@ -466,7 +466,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <returns></returns>
         public float ReadF32() {
@@ -475,7 +475,7 @@ namespace Soly.ByteArray {
             return result;
         }
         /// <summary>
-        /// Read data advancing the internal position
+        /// Read data from the ByteArray data advancing the internal position
         /// </summary>
         /// <returns></returns>
         public double ReadF64() {
@@ -485,50 +485,30 @@ namespace Soly.ByteArray {
         }
 
         /// <summary>
-        /// Read data to the array without advancing the internal position
+        /// Read data from the ByteArray data to the array without advancing the internal position
         /// </summary>
         /// <param name="array">Array to read data to</param>
         /// <param name="index">Array position to read to</param>
         /// <param name="length">Amount of elements to read</param>
         /// <param name="position">Position to read from</param>
         /// <param name="endianess">Endianess to read with</param>
-        public void Read(byte[] array, int index, int length, int position, Endianess endianess) {
+        public void Read(byte[] array, int index, int length, int position) {
             length += index;
             while (index < length) {
-                array[index] = ReadU8(position, endianess);
+                array[index] = ReadU8(position, this.endianess);
                 position += 1;
                 index++;
             }
         }
         /// <summary>
-        /// Read data to the array without advancing the internal position
-        /// </summary>
-        /// <param name="array">Array to read data to</param>
-        /// <param name="index">Array position to read to</param>
-        /// <param name="length">Amount of elements to read</param>
-        /// <param name="position">Position to read from</param>
-        public void Read(byte[] array, int index, int length, int position) {
-            this.Read(array, index, length, position, this.endianess);
-        }
-        /// <summary>
-        /// Read data to the array advancing the internal position
+        /// Read data from the ByteArray data to the array advancing the internal position
         /// </summary>
         /// <param name="array">Array to read data to</param>
         /// <param name="index">Array position to read to</param>
         /// <param name="length">Amount of elements to read</param>
         /// <param name="endianess">Endianess to read with</param>
-        public void Read(byte[] array, int index, int length, Endianess endianess) {
-            this.Read(array, index, length, this.position, endianess);
-            this.position += (length * 1);
-        }
-        /// <summary>
-        /// Read data to the array advancing the internal position
-        /// </summary>
-        /// <param name="array">Array to read data to</param>
-        /// <param name="index">Array position to read to</param>
-        /// <param name="length">Amount of elements to read</param>
         public void Read(byte[] array, int index, int length) {
-            this.Read(array, index, length, this.position, this.endianess);
+            this.Read(array, index, length, this.position);
             this.position += (length * 1);
         }
     }
