@@ -491,7 +491,6 @@ namespace Soly.ByteArray {
         /// <param name="index">Array position to read to</param>
         /// <param name="length">Amount of elements to read</param>
         /// <param name="position">Position to read from</param>
-        /// <param name="endianess">Endianess to read with</param>
         public void Read(byte[] array, int index, int length, int position) {
             length += index;
             while (index < length) {
@@ -506,7 +505,6 @@ namespace Soly.ByteArray {
         /// <param name="array">Array to read data to</param>
         /// <param name="index">Array position to read to</param>
         /// <param name="length">Amount of elements to read</param>
-        /// <param name="endianess">Endianess to read with</param>
         public void Read(byte[] array, int index, int length) {
             this.Read(array, index, length, this.position);
             this.position += (length * 1);

@@ -482,7 +482,6 @@ namespace Soly.ByteArray {
         /// <param name="index">Array position to write from</param>
         /// <param name="length">Amount of elements to write</param>
         /// <param name="position">Position to write to</param>
-        /// <param name="endianess">Endianess to write with</param>
         public void Write(byte[] array, int index, int length, int position) {
             length += index;
             while (index < length) {
@@ -497,7 +496,6 @@ namespace Soly.ByteArray {
         /// <param name="array">Array to write data from</param>
         /// <param name="index">Array position to write from</param>
         /// <param name="length">Amount of elements to write</param>
-        /// <param name="endianess">Endianess to write with</param>
         public void Write(byte[] array, int index, int length) {
             this.Write(array, index, length, this.position);
             this.position += (length * 1);
