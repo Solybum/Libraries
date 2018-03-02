@@ -10,6 +10,8 @@ A wrapper to ease data type conversions to and from byte arrays.
 A basic MVVM library with property changed, Commands and a message bus.  
 Message bus taken from [MVVMFabric](https://github.com/brentedwards/MvvmFabric/tree/master/MvvmFabric/Messaging)  
 
+[Thread Safe Random](https://github.com/Solybum/Libraries/tree/master/TSRandom)
+Thread safe random library, code from [ObeautifulCode.Math](https://github.com/OBeautifulCode/OBeautifulCode.Math/blob/master/OBeautifulCode.Math/ThreadSafeRandom.cs)
 ---
 
 [MySQL Connector/Net](https://dev.mysql.com/downloads/connector/net/)  
