@@ -1,10 +1,12 @@
 ﻿using System;
 
-namespace Soly.ByteArray {
+namespace Soly.ByteArray
+{
     /// <summary>
     /// Wrapper to ease data type conversions to and from <see cref="byte"/> arrays
     /// </summary>
-    public partial class ByteArray {
+    public partial class ByteArray
+    {
         /// <summary>
         /// Temporary buffer for floats.
         /// It's initialized right away
@@ -26,22 +28,27 @@ namespace Soly.ByteArray {
         /// <summary>
         /// Reference to the internal buffer
         /// </summary>
-        public byte[] Buffer {
+        public byte[] Buffer
+        {
             get { return this.buffer; }
         }
         /// <summary>
         /// Length of the internal buffer
         /// </summary>
-        public int Length {
+        public int Length
+        {
             get { return this.buffer.Length; }
         }
         /// <summary>
         /// Position in the internal buffer
         /// </summary>
-        public int Position {
+        public int Position
+        {
             get { return this.position; }
-            set {
-                if (value < 0 || value > this.buffer.Length) {
+            set
+            {
+                if (value < 0 || value > this.buffer.Length)
+                {
                     throw new ArgumentOutOfRangeException(nameof(value));
                 }
                 this.position = value;
@@ -50,7 +57,8 @@ namespace Soly.ByteArray {
         /// <summary>
         /// Current endianess
         /// </summary>
-        public Endianess Endianess {
+        public Endianess Endianess
+        {
             get { return this.endianess; }
             set { this.endianess = value; }
         }
@@ -59,15 +67,18 @@ namespace Soly.ByteArray {
         /// Constructor intializing a new array
         /// </summary>
         /// <param name="size">Size for the internal buffer</param>
-        public ByteArray(int size) : this(size, Endianess.LittleEndian) {
+        public ByteArray(int size) : this(size, Endianess.LittleEndian)
+        {
         }
         /// <summary>
         /// Constructor intializing a new array
         /// </summary>
         /// <param name="size">Size for the internal buffer</param>
         /// <param name="endianess">Default endianess of the ByteArray</param>
-        public ByteArray(int size, Endianess endianess) {
-            if (size < 0) {
+        public ByteArray(int size, Endianess endianess)
+        {
+            if (size < 0)
+            {
                 throw new ArgumentOutOfRangeException(nameof(size));
             }
             this.buffer = new byte[size];
@@ -77,15 +88,18 @@ namespace Soly.ByteArray {
         /// Alternative constructor wrapping an already existing array
         /// </summary>
         /// <param name="byteArray">Array reference to use as backing array</param>
-        public ByteArray(byte[] byteArray) : this(byteArray, Endianess.LittleEndian) {
+        public ByteArray(byte[] byteArray) : this(byteArray, Endianess.LittleEndian)
+        {
         }
         /// <summary>
         /// Alternative constructor wrapping an already existing array
         /// </summary>
         /// <param name="byteArray">Array reference to use as backing array</param>
         /// <param name="endianess">Default endianess of the ByteArray</param>
-        public ByteArray(byte[] byteArray, Endianess endianess) {
-            if (byteArray == null) {
+        public ByteArray(byte[] byteArray, Endianess endianess)
+        {
+            if (byteArray == null)
+            {
                 throw new ArgumentNullException(nameof(byteArray));
             }
             this.buffer = byteArray;
@@ -96,16 +110,20 @@ namespace Soly.ByteArray {
         /// Change the size of the internal array
         /// </summary>
         /// <param name="size">New size of the internal array</param>
-        public void Resize(int size) {
-            if (size == this.buffer.Length) {
+        public void Resize(int size)
+        {
+            if (size == this.buffer.Length)
+            {
                 return;
             }
-            if (size < 0 || size > int.MaxValue) {
+            if (size < 0 || size > int.MaxValue)
+            {
                 throw new ArgumentOutOfRangeException(nameof(size));
             }
 
             Array.Resize(ref this.buffer, size);
-            if (this.position > size) {
+            if (this.position > size)
+            {
                 this.position = size;
             }
         }
@@ -113,7 +131,8 @@ namespace Soly.ByteArray {
         /// <summary>
         /// Sets all the elements of the array to their default value
         /// </summary>
-        public void Clear() {
+        public void Clear()
+        {
             this.Clear(0, this.buffer.Length);
         }
         /// <summary>
@@ -130,7 +149,8 @@ namespace Soly.ByteArray {
         /// </summary>
         /// <param name="index">The starting index of the elements to be cleared</param>
         /// <param name="length">The number of elements to clear</param>
-        public void Clear(int length, int position) {
+        public void Clear(int length, int position)
+        {
             Array.Clear(this.buffer, position, length);
         }
 
@@ -138,7 +158,8 @@ namespace Soly.ByteArray {
         /// Fills all the byte array with the provided value
         /// </summary>
         /// <param name="value"></param>
-        public void Fill(byte value) {
+        public void Fill(byte value)
+        {
             this.Fill(value, 0, this.buffer.Length);
         }
         /// <summary>
@@ -147,8 +168,10 @@ namespace Soly.ByteArray {
         /// <param name="value">Value to fill in the byte array</param>
         /// <param name="index">Index to start the fill operation</param>
         /// <param name="length">Amount of byes to fill</param>
-        public void Fill(byte value, int index, int length) {
-            for (int i1 = index; i1 < length; i1++) {
+        public void Fill(byte value, int index, int length)
+        {
+            for (int i1 = index; i1 < length; i1++)
+            {
                 this.buffer[i1] = value;
             }
         }
@@ -157,9 +180,11 @@ namespace Soly.ByteArray {
         /// Show up to 16 bytes from the current position
         /// </summary>
         /// <returns></returns>
-        public override string ToString() {
+        public override string ToString()
+        {
             int tslen = this.Length - this.position;
-            if (tslen > 16) {
+            if (tslen > 16)
+            {
                 tslen = 16;
             }
             return string.Format("0x{0:X8}: {1}", this.position, BitConverter.ToString(this.buffer, this.position, tslen).Replace("-", " "));
@@ -170,7 +195,8 @@ namespace Soly.ByteArray {
         /// </summary>
         /// <param name="offset"></param>
         /// <returns></returns>
-        public byte this[int offset] {
+        public byte this[int offset]
+        {
             get { return this.buffer[offset]; }
             set { this.buffer[offset] = value; }
         }
@@ -181,8 +207,10 @@ namespace Soly.ByteArray {
         /// the padded bytes in the process
         /// </summary>
         /// <param name="padding">Number of bytes to pad</param>
-        public void Pad(int padding) {
-            while ((this.position % padding) != 0 && this.position < this.buffer.Length) {
+        public void Pad(int padding)
+        {
+            while ((this.position % padding) != 0 && this.position < this.buffer.Length)
+            {
                 this.buffer[this.position++] = 0;
             }
         }
