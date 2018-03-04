@@ -142,22 +142,26 @@ namespace Soly.ByteArray
 
         /// <summary>
         /// Sets all the elements of the array to their default value
+        /// and sets the internal position to 0
         /// </summary>
         public void Clear()
         {
             this.Clear(0, this.buffer.Length);
+            this.position = 0;
         }
         /// <summary>
         /// Sets a range of elements from the array to their default value
-        /// starting from the current position
+        /// starting from the current position and advances the current position
         /// </summary>
         /// <param name="length">The number of elements to clear</param>
         public void Clear(int length)
         {
             Array.Clear(this.buffer, this.position, length);
+            this.position += length;
         }
         /// <summary>
         /// Sets a range of elements from the array to their default value
+        /// without advancing the current position
         /// </summary>
         /// <param name="length">Amount of elements to clear</param>
         /// <param name="position">Position to clear from</param>
