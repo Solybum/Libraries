@@ -118,11 +118,20 @@ namespace Soly.ByteArray {
         }
         /// <summary>
         /// Sets a range of elements from the array to their default value
+        /// starting from the current position
+        /// </summary>
+        /// <param name="length">The number of elements to clear</param>
+        public void Clear(int length)
+        {
+            Array.Clear(this.buffer, this.position, length);
+        }
+        /// <summary>
+        /// Sets a range of elements from the array to their default value
         /// </summary>
         /// <param name="index">The starting index of the elements to be cleared</param>
         /// <param name="length">The number of elements to clear</param>
-        public void Clear(int index, int length) {
-            Array.Clear(this.buffer, index, length);
+        public void Clear(int length, int position) {
+            Array.Clear(this.buffer, position, length);
         }
 
         /// <summary>
