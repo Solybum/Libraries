@@ -105,6 +105,18 @@ namespace Soly.ByteArray
             this.buffer = byteArray;
             this.endianess = endianess;
         }
+        /// <summary>
+        /// Alternative constructor to copy an existing ByteArray
+        /// </summary>
+        /// <param name="byteArray">ByteArray to copy from</param>
+        public ByteArray(ByteArray byteArray)
+        {
+            this.buffer = new byte[byteArray.Length];
+            this.endianess = byteArray.endianess;
+
+            byteArray.position = 0;
+            byteArray.Read(this.buffer, 0, this.buffer.Length);
+        }
 
         /// <summary>
         /// Change the size of the internal array
