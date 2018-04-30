@@ -3,7 +3,7 @@ A collection of libraries I use in my projects.
 The license in the root of this repository applies to all works made by me, other works include their respective licenses in their directory.
 
 ---
-[ByteArray](https://github.com/Solybum/Libraries/tree/master/ByteArray)  
+[ByteArray](https://github.com/Solybum/ByteArray)  
 A wrapper to ease data type conversions to and from byte arrays.  
 
 [MVVM](https://github.com/Solybum/Libraries/tree/master/MVVM)  
