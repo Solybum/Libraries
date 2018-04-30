@@ -160,7 +160,10 @@ namespace Soly.ByteArray {
         public void Write(float value, int position, Endianess endianess) {
             Array.Copy(BitConverter.GetBytes(value), 0, this.temp, 0, 4);
             if (endianess == Endianess.BigEndian) {
-
+                this.buffer[position + 3] = this.temp[0];
+                this.buffer[position + 2] = this.temp[1];
+                this.buffer[position + 1] = this.temp[2];
+                this.buffer[position + 0] = this.temp[3];
             } else {
                 this.buffer[position + 0] = this.temp[0];
                 this.buffer[position + 1] = this.temp[1];
